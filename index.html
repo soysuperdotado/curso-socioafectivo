@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Desarrollo socioafectivo en estudiantes con alta capacidad · Curso en video · Soy Superdotado</title>
+<meta name="description" content="Curso en video sobre el desarrollo socioafectivo de estudiantes con altas capacidades y su integración en el currículo escolar. Nueve módulos con la Lic. Gretel Hernández, para profesionales, estudiantes y personas interesadas en la temática. Con certificado.">
+<meta name="theme-color" content="#0E2A52">
+<link rel="icon" type="image/png" href="img/logo-soy-superdotado.png">
+<link rel="canonical" href="https://soysuperdotado.github.io/socioafectivo/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Soy Superdotado">
+<meta property="og:title" content="Desarrollo socioafectivo en estudiantes con alta capacidad">
+<meta property="og:description" content="Curso en video sobre el desarrollo socioafectivo de estudiantes con altas capacidades y su integración en el currículo escolar. Nueve módulos con la Lic. Gretel Hernández, para profesionales, estudiantes y personas interesadas en la temática. Con certificado.">
+<meta property="og:url" content="https://soysuperdotado.github.io/socioafectivo/">
+<meta property="og:image" content="https://soysuperdotado.github.io/socioafectivo/img/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Desarrollo socioafectivo en estudiantes con alta capacidad; su integración en el currículo escolar","description":"Curso en video sobre el desarrollo socioafectivo de estudiantes con altas capacidades y su integración en el currículo escolar. Nueve módulos con la Lic. Gretel Hernández, para profesionales, estudiantes y personas interesadas en la temática. Con certificado.","inLanguage":"es","educationalCredentialAwarded":"Certificado del curso","hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","courseWorkload":"PT9H"},"offers":[{"@type":"Offer","price":"89000","priceCurrency":"ARS","category":"Paid"},{"@type":"Offer","price":"79","priceCurrency":"USD","category":"Paid"},{"@type":"Offer","price":"79","priceCurrency":"EUR","category":"Paid"}],"provider":{"@type":"Organization","name":"Soy Superdotado","url":"https://soysuperdotadoweb.com"},"instructor":{"@type":"Person","name":"Gretel Hernández","jobTitle":"Psicóloga clínica"}}</script>
+<style>
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 200 800; font-display: swap; src: url('assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Fraunces'; font-style: italic; font-weight: 100 900; font-display: swap; src: url('assets/fonts/fraunces-latin-italic.woff2') format('woff2'); }
+/* Layout: la tesis a la izquierda y el video de muestra a la derecha;
+   luego secciones de una columna ancha que alternan papel frío y azul profundo, como las diapositivas del curso. */
+:root {
+  --navy: #0E2A52;
+  --navy-deep: #0A2145;
+  --navy-soft: #17477B;
+  --teal: #17708C;
+  --teal-light: #7AD0E6;
+  --lime: #B2DC3A;
+  --paper: #F6F9FC;
+  --card: #E9F0F6;
+  --line: #D0DCE9;
+  --ink: #1D2E45;
+  --muted: #485A72;
+  --white: #FFFFFF;
+  --on-navy-soft: #CBD9EA;
+  --sans: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --max: 1120px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --section: clamp(3.5rem, 7vw, 6rem);
+    --lime-hover: #C3E95A;
+  --on-navy: #E4ECF6;
+  /* Tipografía: escala de 7 pasos */
+  --t-xs: 0.8125rem;   /* 13px · etiquetas en mayúsculas, metadatos */
+  --t-sm: 0.9375rem;   /* 15px · notas, texto secundario, botones chicos */
+  --t-base: 1.0625rem; /* 17px · texto de lectura (16px en celular) */
+  --t-md: 1.125rem;    /* 18px · bajadas, títulos de ítems */
+  --t-lg: clamp(1.15rem, 1.6vw, 1.3rem);  /* títulos de tarjetas */
+  --t-xl: clamp(1.75rem, 3.4vw, 2.6rem);  /* h2 */
+  --t-2xl: clamp(2.3rem, 3.3vw, 2.9rem);  /* h1 */
+  /* Forma */
+  --r-xs: 6px;    /* esquina «pegada» de citas y burbujas */
+  --r-sm: 12px;   /* avisos, pestañas, chips cuadrados, íconos */
+  --r-md: 18px;   /* tarjetas, imágenes, pantallas */
+  --r-lg: 24px;   /* paneles grandes y caja de compra */
+  --r-pill: 999px;/* botones y etiquetas */
+  /* Profundidad: tres sombras */
+  --sombra-tarjeta: 0 12px 32px rgba(14, 42, 82, 0.06);
+  --sombra-elevada: 0 28px 60px rgba(3, 12, 30, 0.55);
+  --sombra-flotante: 0 14px 30px rgba(3, 12, 30, 0.4);
+  --sombra-barra: 0 -10px 30px rgba(4, 16, 36, 0.28);
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--t-base);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+[hidden] { display: none !important; }
+img, video, svg { max-width: 100%; }
+img, video { display: block; height: auto; }
+h1, h2, h3, p, ul, ol, dl, dd, figure, blockquote { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3 { text-wrap: balance; color: var(--navy); letter-spacing: -0.015em; }
+a { color: var(--teal); text-underline-offset: 0.18em; }
+em.acento { font-family: var(--serif); font-style: italic; font-weight: 500; letter-spacing: -0.01em; color: var(--teal); }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: var(--r-xs); }
+.sobre-navy :focus-visible { outline-color: var(--lime); }
+.solo-lectores { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+.seccion { padding-block: var(--section); }
+section[id] { scroll-margin-top: 4rem; }
+.seccion > .wrap { display: grid; gap: clamp(1.75rem, 3.5vw, 2.75rem); }
+.encabezado { display: grid; gap: 0.75rem; max-width: 46rem; }
+.etiqueta { font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+h2 { font-size: var(--t-xl); font-weight: 800; line-height: 1.14; }
+.bajada { font-size: var(--t-md); color: var(--muted); max-width: 40rem; }
+
+/* Botones */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 3.25rem; padding: 0.8rem 1.6rem;
+  border: 2px solid transparent; border-radius: var(--r-pill);
+  font: inherit; font-weight: 700; font-size: var(--t-base); line-height: 1.2; text-decoration: none; cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-navy { background: var(--navy); color: var(--white); }
+.btn-navy:hover { background: var(--navy-soft); }
+.btn-lime { background: var(--lime); color: var(--navy-deep); }
+.btn-lime:hover { background: var(--lime-hover); }
+.btn-linea { background: transparent; color: var(--navy); border-color: var(--line); }
+.btn-linea:hover { border-color: var(--navy); }
+.btn svg { flex: none; }
+
+/* Cabecera */
+.cabecera {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(246, 249, 252, 0.94);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.cabecera .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.6rem; }
+.marca { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--navy); font-weight: 800; font-size: var(--t-base); text-decoration: none; letter-spacing: -0.01em; }
+.marca img { width: 40px; height: 40px; }
+.menu { display: flex; align-items: center; gap: 1.6rem; }
+.menu a:not(.btn) { color: var(--ink); font-size: var(--t-sm); font-weight: 600; text-decoration: none; }
+.menu a:not(.btn):hover { color: var(--teal); }
+.progreso { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: linear-gradient(90deg, var(--teal), var(--lime)); transform: scaleX(0); transform-origin: 0 50%; }
+.cabecera .btn { min-height: 2.75rem; padding: 0.5rem 1.15rem; font-size: var(--t-sm); }
+
+/* Hero */
+.hero { padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3rem); overflow: hidden; }
+.hero-principal { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+.hero-texto { display: grid; gap: 1.25rem; }
+.hero h1 { font-size: var(--t-2xl); font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; color: var(--white); }
+.hero h1 em.acento { display: block; letter-spacing: -0.02em; }
+.hero .hero-tema { font-size: clamp(1.15rem, 1.6vw, 1.35rem); font-weight: 600; line-height: 1.35; color: var(--white); text-wrap: balance; }
+.hero .bajada { font-size: clamp(1.05rem, 1.35vw, 1.15rem); max-width: 33rem; }
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-top: 0.5rem; }
+.sobre-navy .btn-linea { color: var(--white); border-color: rgba(255, 255, 255, 0.34); }
+.sobre-navy .btn-linea:hover { border-color: var(--white); }
+.hero-clase { display: grid; gap: 0.7rem; margin: 0; }
+.hero-clase img { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--r-md); border: 1px solid rgba(255, 255, 255, 0.28); box-shadow: var(--sombra-elevada); background: var(--navy-deep); }
+.video-marco { position: relative; border-radius: var(--r-md); overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.28); box-shadow: var(--sombra-elevada); background: var(--navy-deep); container-type: inline-size; }
+.video-marco video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--navy-deep); }
+.video-play { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.7rem; padding: 0 0 0 58%; border: 0; background: linear-gradient(90deg, rgba(10, 33, 69, 0) 50%, rgba(10, 33, 69, 0.32) 100%); color: var(--white); font: inherit; cursor: pointer; }
+.video-icono { position: relative; width: clamp(3.4rem, 7vw, 4.5rem); width: clamp(3.4rem, 13cqi, 5.5rem); aspect-ratio: 1; border-radius: 50%; background: var(--lime); box-shadow: var(--sombra-flotante); transition: transform 0.2s ease; }
+.video-icono::after { content: ''; position: absolute; top: 50%; left: 54%; transform: translate(-50%, -50%); border-style: solid; border-width: 0.6em 0 0.6em 1em; border-color: transparent transparent transparent var(--navy); font-size: clamp(0.85rem, 1.6vw, 1.1rem); font-size: clamp(0.85rem, 2.9cqi, 1.35rem); }
+.video-play:hover .video-icono, .video-play:focus-visible .video-icono { transform: scale(1.07); }
+.video-play:focus-visible { outline: 3px solid var(--lime); outline-offset: -3px; }
+.hero-clase figcaption { font-size: var(--t-sm); color: var(--on-navy-soft); text-wrap: balance; }
+.ficha { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) minmax(0, 1.1fr) minmax(0, 1.1fr); margin: clamp(2rem, 4vw, 3rem) 0 0; border-top: 1px solid rgba(255, 255, 255, 0.18); }
+.ficha > div { padding: 1.15rem 1.25rem 0 0; }
+.ficha > div + div { padding-left: 1.25rem; border-left: 1px solid rgba(255, 255, 255, 0.18); }
+.ficha dt { margin-bottom: 0.3rem; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal-light); }
+.ficha dd { color: var(--white); font-size: var(--t-base); font-weight: 600; line-height: 1.4; font-variant-numeric: tabular-nums; text-wrap: balance; }
+.ficha .precios { white-space: nowrap; }
+.ficha .precios span + span::before { content: ' · '; }
+.ficha .nota { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--on-navy-soft); }
+
+/* ¿Te suena? */
+.suena { padding-bottom: clamp(1rem, 2vw, 1.5rem); }
+.frases { display: flex; flex-wrap: wrap; gap: 0.75rem; max-width: 60rem; }
+.frases li { padding: 0.8rem 1.25rem; border-radius: var(--r-pill) var(--r-pill) var(--r-pill) var(--r-xs); background: var(--white); border: 1px solid var(--line); font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 1.6vw, 1.25rem); line-height: 1.35; color: var(--navy); }
+.sin-aire { padding-top: clamp(2.5rem, 5vw, 4rem); }
+
+/* Para quién es */
+.dirigido .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: start; gap: clamp(2rem, 5vw, 4rem); }
+.dirigido-texto { display: grid; gap: 1.1rem; }
+.dirigido-texto > p { font-size: var(--t-md); color: var(--muted); }
+.dirigido-texto > p.para-ti { margin-top: 0.4rem; padding-top: 1.4rem; border-top: 1px solid var(--line); font-size: clamp(1.15rem, 1.8vw, 1.3rem); font-weight: 600; line-height: 1.45; color: var(--navy); text-wrap: pretty; }
+.trabajo { display: grid; gap: 1rem; padding: clamp(1.25rem, 3vw, 2rem); border-radius: var(--r-lg); background: var(--card); }
+.trabajo h3 { font-size: var(--t-lg); font-weight: 800; }
+.funciones li { padding: 0.7rem 0; border-top: 1px solid rgba(14, 42, 82, 0.14); color: var(--navy); font-weight: 600; line-height: 1.35; }
+.funciones li:last-child { border-bottom: 1px solid rgba(14, 42, 82, 0.14); }
+.funciones .transversal span { display: block; margin-top: 0.1rem; font-size: var(--t-sm); font-weight: 400; color: var(--muted); }
+.trabajo .nota { font-size: var(--t-base); color: var(--ink); }
+.busca { grid-column: 1 / -1; display: grid; gap: 1.1rem; margin-top: clamp(0.5rem, 2vw, 1.5rem); }
+.busca h3 { font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.busca ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem clamp(1.25rem, 3vw, 2.5rem); }
+.busca li { padding-top: 1rem; border-top: 2px solid var(--navy); font-size: clamp(1.08rem, 1.5vw, 1.2rem); font-weight: 600; line-height: 1.4; color: var(--navy); text-wrap: balance; }
+
+/* Banda azul: idea central */
+.sobre-navy { background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-soft) 130%); color: var(--white); }
+.sobre-navy h2, .sobre-navy h3 { color: var(--white); }
+.sobre-navy .etiqueta { color: var(--lime); }
+.sobre-navy em.acento { color: var(--teal-light); }
+.sobre-navy p { color: var(--on-navy-soft); }
+.sobre-navy a:not(.btn) { color: var(--lime); }
+
+/* Palabras de la docente */
+.cita-banda { padding-block: clamp(3rem, 6vw, 4.75rem); }
+.cita { display: grid; gap: 1.6rem; max-width: 52rem; margin: 0; }
+.cita blockquote { margin: 0; }
+.cita blockquote p { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.45rem, 2.7vw, 2.05rem); line-height: 1.36; color: var(--white); text-wrap: pretty; }
+.cita figcaption { display: flex; align-items: center; gap: 1rem; font-size: var(--t-sm); line-height: 1.4; color: var(--on-navy-soft); }
+.cita figcaption img { flex: none; width: 4rem; height: 4rem; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.4); }
+.cita figcaption strong { display: block; font-size: var(--t-base); color: var(--white); }
+
+/* Programa */
+.sintesis { --sep: clamp(1rem, 2.5vw, 2rem); display: grid; gap: 1.25rem; padding: clamp(1.25rem, 3vw, 2rem); border-radius: var(--r-lg); background: var(--card); }
+.sintesis h3 { font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.sintesis ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sep); counter-reset: etapa; }
+.sintesis li { position: relative; display: grid; gap: 0.3rem; align-content: start; padding-top: 3rem; counter-increment: etapa; }
+.sintesis li::before { content: counter(etapa); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--navy); color: var(--white); font-size: var(--t-sm); font-weight: 800; }
+.sintesis li:last-child::before { background: var(--lime); color: var(--navy-deep); }
+.sintesis li:not(:last-child)::after { content: ''; position: absolute; left: 2.75rem; right: calc(-1 * var(--sep) + 0.5rem); top: calc(1.125rem - 1px); height: 2px; background: var(--navy); opacity: 0.25; }
+.sintesis strong { font-size: var(--t-base); font-weight: 800; line-height: 1.25; color: var(--navy); }
+.sintesis span { font-size: var(--t-base); line-height: 1.4; color: var(--muted); }
+.modulos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.25rem, 4vw, 3.25rem) clamp(1.5rem, 3vw, 2.5rem); }
+.modulo { display: grid; gap: 0.55rem; align-content: start; }
+.modulo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-bottom: 0.5rem; border-radius: var(--r-md); background: var(--navy); }
+.modulo .modulo-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-size: var(--t-sm); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); }
+.modulo-meta .duracion { padding: 0.15rem 0.65rem; border-radius: var(--r-pill); background: var(--card); color: var(--navy); letter-spacing: 0.02em; text-transform: none; font-variant-numeric: tabular-nums; }
+.modulo h3 { font-size: clamp(1.3rem, 2vw, 1.5rem); font-weight: 800; line-height: 1.2; }
+.modulo .modulo-logro { font-size: var(--t-base); color: var(--muted); }
+.modulo .modulo-extra { justify-self: start; padding: 0.35rem 0.8rem; border-radius: var(--r-sm); background: var(--card); color: var(--navy); font-size: var(--t-sm); font-weight: 600; }
+.modulo-mas { margin-top: 0.4rem; }
+.modulo-mas summary { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.75rem; padding: 0.35rem 1rem; border: 1px solid var(--line); border-radius: var(--r-pill); color: var(--navy); font-size: var(--t-sm); font-weight: 700; cursor: pointer; list-style: none; }
+.modulo-mas summary::-webkit-details-marker { display: none; }
+.modulo-mas summary::after { content: ''; width: 0.5rem; height: 0.5rem; border-right: 2px solid var(--teal); border-bottom: 2px solid var(--teal); transform: translateY(-2px) rotate(45deg); transition: transform 0.2s ease; }
+.modulo-mas[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.modulo-mas summary:hover { border-color: var(--navy); }
+.modulo-mas > p { margin-top: 0.75rem; max-width: 34rem; font-size: var(--t-base); color: var(--muted); }
+.modulo-mas > .actividad { padding-top: 0.75rem; border-top: 1px solid var(--line); color: var(--ink); font-size: var(--t-sm); }
+
+/* Qué incluye */
+.incluye-banda { background: var(--white); border-block: 1px solid var(--line); }
+.incluye { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.incluye li { display: grid; gap: 0.4rem; align-content: start; padding-top: 1.1rem; border-top: 2px solid var(--navy); }
+.incluye .cifra { font-size: clamp(3rem, 6vw, 4rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--navy); font-variant-numeric: tabular-nums; }
+.incluye h3 { font-size: var(--t-md); font-weight: 800; }
+.incluye p { color: var(--muted); font-size: var(--t-base); }
+.incluye-foto { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin-top: 0.6rem; border-radius: var(--r-sm); }
+
+/* Quién lo dicta */
+.docente .wrap { grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); align-items: start; gap: clamp(1.75rem, 5vw, 4rem); }
+.docente img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: var(--r-lg); }
+.docente-texto { display: grid; gap: 1rem; }
+.docente-nombre { display: grid; gap: 0.2rem; }
+.docente-nombre p { font-size: var(--t-base); font-weight: 700; color: var(--teal); }
+.docente-texto > p:not(.etiqueta) { color: var(--muted); max-width: 40rem; }
+.credenciales { display: grid; gap: 0.55rem; max-width: 40rem; }
+.credenciales li { position: relative; padding-left: 1.5rem; color: var(--ink); }
+.credenciales li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--lime); border: 2px solid var(--navy); }
+
+/* Comprar */
+.comprar .wrap { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: start; gap: clamp(2rem, 5vw, 4rem); }
+.comprar-texto { display: grid; gap: 1.5rem; }
+.pasos { display: grid; gap: 1.1rem; counter-reset: paso; }
+.pasos li { display: grid; grid-template-columns: 2.4rem 1fr; gap: 0.15rem 0.9rem; counter-increment: paso; }
+.pasos li::before { content: counter(paso); grid-row: span 2; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--lime); color: var(--navy-deep); font-weight: 800; }
+.pasos strong { color: var(--white); font-size: var(--t-base); line-height: 1.35; align-self: end; }
+.pasos span { grid-column: 2; color: var(--on-navy-soft); font-size: var(--t-base); line-height: 1.5; }
+.aviso-gmail { display: grid; gap: 0.35rem; padding: 1rem 1.15rem; border-left: 4px solid var(--lime); border-radius: 0 var(--r-sm) var(--r-sm) 0; background: rgba(178, 220, 58, 0.12); }
+.aviso-gmail p { color: var(--white); font-size: var(--t-base); line-height: 1.5; }
+.aviso-gmail p:first-child strong { font-size: var(--t-base); }
+.aviso-gmail a { color: var(--lime); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.resumen { display: grid; gap: 0.8rem; padding: 1.25rem 1.4rem; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--r-md); }
+.resumen h3 { font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal-light); }
+.resumen ul { display: grid; gap: 0.45rem; }
+.resumen li { position: relative; padding-left: 1.4rem; color: var(--white); line-height: 1.4; }
+.resumen li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--lime); }
+.resumen p { padding-top: 0.8rem; border-top: 1px solid rgba(255, 255, 255, 0.16); font-size: var(--t-sm); }
+.resumen a { overflow-wrap: anywhere; }
+.caja { display: grid; gap: 1.25rem; padding: clamp(1.1rem, 3vw, 2rem); border-radius: var(--r-lg); background: var(--white); color: var(--ink); box-shadow: var(--sombra-elevada); }
+.sobre-navy .caja p { color: var(--muted); }
+.sobre-navy .caja a:not(.btn) { color: var(--teal); }
+.sobre-navy .caja .monto { color: var(--navy); }
+.sobre-navy .caja :focus-visible { outline-color: var(--teal); }
+.regiones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.4rem; padding: 0.3rem; border-radius: var(--r-sm); background: var(--card); }
+.regiones button { min-height: 3rem; padding: 0.45rem 0.4rem; border: 0; border-radius: var(--r-sm); background: transparent; color: var(--navy); font: inherit; font-size: var(--t-sm); font-weight: 700; line-height: 1.2; cursor: pointer; }
+.regiones button[aria-selected="true"] { background: var(--navy); color: var(--white); }
+.region { display: grid; gap: 1.1rem; }
+.region + .region { padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.con-pestanas .region + .region { padding-top: 0; border-top: 0; }
+.region-precio { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.2rem 1rem; }
+.region-precio h3 { font-size: var(--t-base); font-weight: 700; color: var(--muted); letter-spacing: 0; }
+.region-precio .monto { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; color: var(--navy); line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.metodo { display: grid; gap: 0.7rem; }
+.metodo h4 { margin: 0; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.datos-pago { display: grid; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; }
+.dato { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: 0.6rem; align-items: center; padding: 0.55rem 0.6rem 0.55rem 0.9rem; }
+.dato + .dato { border-top: 1px solid var(--line); }
+.dato dt { font-size: var(--t-xs); font-weight: 700; color: var(--muted); }
+.dato dd { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; min-width: 0; }
+.dato .valor { min-width: 0; font-weight: 600; color: var(--navy); overflow-wrap: anywhere; line-height: 1.35; font-variant-numeric: tabular-nums; }
+.dato .valor small { display: block; font-weight: 400; font-size: var(--t-sm); color: var(--muted); }
+.copiar { flex: none; min-width: 4.9rem; min-height: 2.75rem; padding: 0.3rem 0.7rem; border: 1px solid var(--line); border-radius: var(--r-pill); background: var(--paper); color: var(--navy); font: inherit; font-size: var(--t-sm); font-weight: 700; cursor: pointer; }
+.copiar:hover { border-color: var(--navy); }
+.copiar.listo { background: var(--lime); border-color: var(--lime); }
+.aviso { padding: 0.75rem 0.95rem; border-radius: var(--r-sm); background: var(--card); font-size: var(--t-sm); color: var(--ink); line-height: 1.5; }
+.sobre-navy .caja .aviso { color: var(--ink); }
+.caja .btn { width: 100%; }
+.comprobante { display: grid; gap: 0.75rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.comprobante h3 { font-size: var(--t-md); font-weight: 800; color: var(--navy); }
+.correo-fila { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; }
+.correo-fila .correo-etiqueta { color: var(--ink); }
+.correo-fila .correo { font-weight: 700; color: var(--navy); overflow-wrap: anywhere; }
+.titular-nota { font-size: var(--t-sm); }
+
+/* Preguntas */
+.preguntas .wrap { max-width: 52rem; }
+.faq { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { position: relative; padding: 1.1rem 2.75rem 1.1rem 0; font-weight: 700; font-size: var(--t-md); color: var(--navy); line-height: 1.35; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ''; position: absolute; right: 0.4rem; top: 50%; width: 0.7rem; height: 0.7rem; border-right: 2.5px solid var(--teal); border-bottom: 2.5px solid var(--teal); transform: translateY(-70%) rotate(45deg); transition: transform 0.2s ease; }
+.faq details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+.faq details p { padding: 0 2.75rem 1.25rem 0; color: var(--muted); }
+
+/* Pie */
+.pie { padding-block: clamp(2.5rem, 5vw, 3.5rem); background: var(--navy-deep); color: var(--on-navy-soft); font-size: var(--t-sm); }
+.pie .wrap { display: grid; gap: 2rem; }
+.pie-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem 2.5rem; }
+.pie h2 { margin-bottom: 0.5rem; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--lime); }
+.pie a { color: var(--white); overflow-wrap: anywhere; }
+.pie-base { padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.14); font-size: var(--t-sm); }
+
+/* Testimonios, repartidos en la página: un mismo formato discreto en cada lugar */
+.testimonio-linea { display: grid; gap: 0.85rem; max-width: 44rem; margin: 0; padding: 1.3rem 1.5rem 1.3rem 1.4rem; border: 1px solid var(--line); border-left: 4px solid var(--lime); border-radius: var(--r-xs) var(--r-md) var(--r-md) var(--r-xs); background: var(--white); }
+.testimonio-linea blockquote { display: grid; gap: 0.6rem; margin: 0; }
+.testimonio-linea blockquote p { font-family: var(--serif); font-style: italic; font-size: clamp(1.04rem, 1.35vw, 1.12rem); line-height: 1.55; color: var(--ink); text-wrap: pretty; }
+.testimonio-linea figcaption { font-size: var(--t-sm); font-weight: 600; line-height: 1.4; color: var(--teal); }
+.testimonio-linea figcaption strong { font-weight: 800; letter-spacing: 0.03em; }
+.testimonio-etiqueta { display: flex; align-items: center; gap: 0.55rem; font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.testimonio-etiqueta::before { content: ''; flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--lime); }
+.testimonio-destacado figcaption strong { font-size: var(--t-sm); color: var(--navy); }
+.dirigido-texto { grid-column: 1; grid-row: 1; }
+.dirigido .trabajo { grid-column: 2; grid-row: 1; }
+.vivo-grupo { grid-column: 1 / -1; max-width: none; gap: 1.1rem; padding: clamp(1.3rem, 2.6vw, 1.9rem) clamp(1.3rem, 2.8vw, 2.1rem); }
+.vivo-grilla { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: clamp(1.25rem, 3vw, 2.5rem); align-items: start; }
+.vivo-item { display: grid; gap: 0.7rem; margin: 0; }
+.vivo-item figcaption strong { font-size: var(--t-sm); color: var(--navy); }
+.vivo-cortos { display: grid; gap: 1.1rem; padding-left: clamp(1.25rem, 3vw, 2.5rem); border-left: 1px solid var(--line); }
+.vivo-cortos .vivo-item + .vivo-item { padding-top: 1.1rem; border-top: 1px solid var(--line); }
+.incluye-banda .testimonio-linea { background: var(--paper); }
+.docente-testimonios { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2.2vw, 1.5rem); margin-top: clamp(0.25rem, 1.5vw, 1rem); }
+.docente-testimonios .testimonio-linea { max-width: none; align-content: space-between; }
+.sobre-navy .testimonio-linea { border-color: rgba(255, 255, 255, 0.16); border-left-color: var(--lime); background: rgba(255, 255, 255, 0.06); }
+.sobre-navy .testimonio-linea blockquote p { color: var(--on-navy); }
+.sobre-navy .testimonio-linea figcaption { color: var(--teal-light); }
+
+/* Barra de compra fija (solo en celular) */
+.barra-compra { display: none; }
+
+/* Movimiento sutil atado al desplazamiento; sin soporte o con «reducir movimiento», todo queda fijo */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .seccion .encabezado, .frases li, .dirigido-texto, .trabajo, .busca li, .cita, .sintesis, .modulo, .incluye li, .docente img, .docente-texto, .testimonio-linea, .comprar-texto, .caja, .faq {
+      animation: entrar linear both; animation-timeline: view(); animation-range: entry 0% entry 45%;
+    }
+    .progreso { animation: avanzar linear both; animation-timeline: scroll(root); }
+    @keyframes entrar { from { opacity: 0.3; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    @keyframes avanzar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  }
+}
+
+@media (max-width: 880px) {
+  .incluye { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .menu a:not(.btn) { display: none; }
+  .hero-principal, .dirigido .wrap, .comprar .wrap, .docente .wrap { grid-template-columns: minmax(0, 1fr); }
+  .dirigido-texto, .dirigido .trabajo, .vivo-grupo { grid-column: auto; grid-row: auto; }
+  .ficha { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 0.4rem; }
+  .ficha > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .ficha .precios { white-space: normal; }
+  .ficha .precios span { display: block; }
+  .ficha .precios span + span::before { content: none; }
+  .docente img { max-width: 16rem; }
+  .pie-cols { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .docente-testimonios { grid-template-columns: minmax(0, 1fr); }
+  .vivo-grilla { grid-template-columns: minmax(0, 1fr); }
+  .vivo-cortos { padding-left: 0; border-left: 0; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+}
+@media (max-width: 640px) {
+  body { font-size: var(--t-base); }
+  :root { --t-base: 1rem; }
+  .modulos, .incluye, .busca ul { grid-template-columns: minmax(0, 1fr); }
+  .sintesis ol { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .sintesis li { padding-top: 0; padding-left: 3.1rem; min-height: 2.25rem; }
+  .sintesis li:not(:last-child)::after { left: calc(1.125rem - 1px); right: auto; top: 2.5rem; bottom: -1rem; width: 2px; height: auto; }
+  .busca li { text-wrap: wrap; }
+  .incluye li { grid-template-columns: 3.4rem minmax(0, 1fr); column-gap: 0.75rem; }
+  .incluye .cifra { grid-row: span 2; font-size: 3.2rem; }
+  .incluye-foto { grid-column: 2; }
+  .acciones .btn { width: 100%; }
+  .frases li { border-radius: var(--r-md) var(--r-md) var(--r-md) var(--r-xs); }
+  .marca span { display: none; }
+  .dato { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .dato .valor { font-size: var(--t-sm); }
+  .copiar { min-width: 4.5rem; }
+  .barra-compra {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 0.7rem var(--gutter) calc(0.7rem + env(safe-area-inset-bottom, 0px));
+    background: var(--navy-deep); color: var(--white); box-shadow: var(--sombra-barra);
+  }
+  .barra-compra p { display: grid; line-height: 1.25; }
+  .barra-compra span { font-size: var(--t-xs); color: var(--on-navy-soft); }
+  .barra-compra strong { font-size: var(--t-md); font-weight: 800; font-variant-numeric: tabular-nums; }
+  .barra-compra .btn { min-height: 2.9rem; padding: 0.6rem 1.5rem; }
+  .con-barra body { padding-bottom: 4.5rem; }
+  .con-barra .cabecera .btn { display: none; }
+  .con-barra .marca span { display: inline; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* ── Beneficio del ciclo en vivo (solo con ?beneficio=vivo y hasta la fecha límite) ── */
+.beneficio-franja { background: var(--lime); color: var(--navy-deep); }
+.beneficio-franja .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.35rem 1rem; padding-block: 0.6rem; font-size: var(--t-sm); line-height: 1.4; text-align: center; }
+.beneficio-franja strong { font-weight: 800; }
+.beneficio-franja a { color: var(--navy-deep); font-weight: 700; }
+.beneficio-caja { display: grid; gap: 0.25rem; padding: 0.85rem 1rem; border-radius: var(--r-sm); background: rgba(178, 220, 58, 0.18); border: 1px solid rgba(178, 220, 58, 0.9); }
+.sobre-navy .caja .beneficio-caja p { color: var(--ink); font-size: var(--t-sm); line-height: 1.45; }
+.sobre-navy .caja .beneficio-caja .beneficio-titulo { font-weight: 800; color: var(--navy); font-size: var(--t-base); }
+.precio-antes { display: block; font-size: var(--t-sm); font-weight: 600; color: var(--muted); text-decoration: line-through; letter-spacing: 0; text-align: right; }
+.ficha .precio-antes, .barra-compra .precio-antes { display: inline; font-size: 0.8em; margin-right: 0.35em; color: inherit; opacity: 0.7; }
+.con-beneficio .ficha .precios { white-space: normal; }
+.con-beneficio .ficha .precios > span { display: block; }
+.con-beneficio .ficha .precios > span + span::before { content: none; }
+.sobre-navy .caja .modalidad-nota { padding: 0.7rem 0.9rem; border-radius: var(--r-sm); background: var(--card); color: var(--ink); font-size: var(--t-sm); line-height: 1.45; }
+
+/* ── Portada con foto y módulos con íconos (versión 24/10/2026) ── */
+.hero-foto { position: relative; margin: 0; }
+.hero-foto img { position: relative; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 62% 40%; border-radius: var(--r-md); border: 1px solid rgba(255, 255, 255, 0.22); box-shadow: var(--sombra-elevada); background: var(--navy-deep); }
+.modulo { padding: clamp(1.4rem, 3vw, 2rem); background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: var(--sombra-tarjeta); }
+.modulo-icono { display: grid; place-items: center; width: 4.4rem; height: 4.4rem; margin-bottom: 0.6rem; border-radius: var(--r-md); background: var(--navy); }
+.modulo-icono .ico { width: 2.5rem; height: 2.5rem; fill: var(--lime); }
+.modulo-icono .ico .ico-tinte { fill: var(--teal-light); opacity: 0.45; }
+
+/* ── Curso socioafectivo: público, partes, certificado (20/11/2026) ── */
+.publico { display: grid; gap: 0.9rem; }
+.publico li { position: relative; padding: 0 0 0.9rem 1.6rem; border-bottom: 1px solid var(--line); font-size: var(--t-base); line-height: 1.5; color: var(--ink); }
+.publico li:last-child { border-bottom: 0; padding-bottom: 0; }
+.publico li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--lime); border: 2px solid var(--navy); }
+.requisito { display: block; padding: 1rem 1.15rem; border-left: 4px solid var(--teal); border-radius: 0 var(--r-sm) var(--r-sm) 0; background: var(--card); font-size: var(--t-base); color: var(--ink); }
+.requisito strong { color: var(--navy); }
+.dirigido .busca { grid-column: 2; grid-row: 1; margin-top: 0; padding: clamp(1.25rem, 3vw, 2rem); border-radius: var(--r-lg); background: var(--card); }
+.dirigido .busca ul { grid-template-columns: minmax(0, 1fr); }
+.frases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 56rem; }
+.frases li { display: flex; align-items: center; }
+.vista { max-width: 50rem; margin: 0 0 clamp(2rem, 4vw, 3rem); }
+.vista img { display: block; width: 100%; height: auto; border-radius: var(--r-sm); border: 1px solid var(--line); box-shadow: var(--sombra-tarjeta); }
+.sintesis ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.partes { display: grid; gap: clamp(2.5rem, 5vw, 3.75rem); }
+.parte { display: grid; gap: clamp(1.1rem, 2.4vw, 1.6rem); }
+.parte-cab { display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; border-bottom: 2px solid var(--navy); }
+.parte-num { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--navy); color: var(--white); font-weight: 800; font-size: var(--t-md); }
+.parte:last-child .parte-num { background: var(--lime); color: var(--navy-deep); }
+.parte-etiqueta { font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.parte-titulo { font-size: clamp(1.25rem, 2.2vw, 1.55rem); font-weight: 800; line-height: 1.2; }
+.modulos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
+.modulos.de-2, .modulos.de-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.modulo { padding: clamp(1.2rem, 2.4vw, 1.6rem); }
+.modulo-icono { width: 3.6rem; height: 3.6rem; border-radius: var(--r-sm); }
+.modulo-icono .ico { width: 2.1rem; height: 2.1rem; }
+.modulo h3 { font-size: var(--t-lg); }
+.modulo .modulo-logro { font-size: var(--t-base); line-height: 1.5; }
+.modulo .modulo-extra { font-size: var(--t-sm); line-height: 1.4; }
+.modulo-mas .objetivos { display: grid; gap: 0.45rem; margin-top: 0.5rem; }
+.modulo-mas .objetivos li { position: relative; padding-left: 1.1rem; font-size: var(--t-sm); line-height: 1.45; color: var(--ink); }
+.modulo-mas .objetivos li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--teal); }
+.incluye .detalle { margin-top: 0.3rem; display: grid; gap: 0.25rem; }
+.incluye .detalle li { border-top: 0; padding-top: 0; display: block; gap: 0; font-size: var(--t-sm); color: var(--muted); line-height: 1.45; padding-left: 0.9rem; position: relative; }
+.incluye .detalle li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 0.35rem; height: 0.35rem; border-radius: 50%; background: var(--teal); }
+.certificado .wrap { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); align-items: start; gap: clamp(2rem, 5vw, 4rem); }
+.certificado .encabezado { align-self: start; }
+.cert-pasos { display: grid; gap: 0; counter-reset: cp; border-top: 1px solid var(--line); }
+.cert-pasos li { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); gap: 0.2rem 1rem; padding: 1.15rem 0; border-bottom: 1px solid var(--line); counter-increment: cp; }
+.cert-pasos li::before { content: counter(cp); grid-row: span 2; display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--navy); color: var(--white); font-weight: 800; }
+.cert-pasos li:last-child::before { background: var(--lime); color: var(--navy-deep); }
+.cert-pasos strong { font-size: var(--t-md); font-weight: 800; color: var(--navy); line-height: 1.3; align-self: end; }
+.cert-pasos span { grid-column: 2; color: var(--muted); }
+.cert-nota { margin-top: 1rem; font-size: var(--t-base); color: var(--muted); }
+.certificado .cert-nota { margin-top: 1.25rem; padding: 0.9rem 1.1rem; border-left: 3px solid var(--lime); background: rgba(14, 42, 82, 0.04); font-size: var(--t-sm, 0.9rem); line-height: 1.5; }
+.certificado .cert-nota strong { color: var(--navy); }
+.sobre-navy .requisito { background: rgba(255, 255, 255, 0.07); border-left-color: var(--lime); color: var(--white); }
+.sobre-navy .requisito strong { color: var(--white); }
+@media (max-width: 980px) {
+  .modulos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 880px) {
+  .certificado .wrap { grid-template-columns: minmax(0, 1fr); }
+  .dirigido .busca { grid-column: auto; grid-row: auto; }
+}
+@media (max-width: 640px) {
+  .modulos, .modulos.de-2, .modulos.de-4 { grid-template-columns: minmax(0, 1fr); }
+  .frases { grid-template-columns: minmax(0, 1fr); }
+  .incluye .detalle { grid-column: 2; }
+  .sintesis ol { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .parte-cab, .cert-pasos li, .publico li, .vista { animation: entrar linear both; animation-timeline: view(); animation-range: entry 0% entry 45%; }
+  }
+}
+
+/* ── Rediseño visual (20/11/2026) ── */
+
+/* Enlaces para saltar: invisibles hasta recibir el foco con el teclado */
+.saltar { position: absolute; left: 1rem; top: -4rem; z-index: 50; padding: 0.7rem 1.1rem; border-radius: var(--r-sm); background: var(--navy); color: var(--white); font-weight: 700; text-decoration: none; }
+.saltar:focus { top: 1rem; }
+main:focus { outline: none; }
+
+/* Hero: profundidad sutil con los colores de la marca */
+.hero { position: relative; isolation: isolate; }
+.hero::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(42rem 30rem at 82% 18%, rgba(122, 208, 230, 0.16), transparent 70%),
+    radial-gradient(30rem 22rem at 6% 96%, rgba(178, 220, 58, 0.10), transparent 70%); }
+.hero::after { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1.4px); background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(115deg, transparent 38%, #000 75%); mask-image: linear-gradient(115deg, transparent 38%, #000 75%); }
+
+/* Hero: la captura real de un módulo, enmarcada como pantalla */
+.hero-video { position: relative; margin: 0; padding-bottom: 1.4rem; }
+.pantalla { position: relative; border-radius: var(--r-md); overflow: hidden; background: var(--white); border: 1px solid rgba(255, 255, 255, 0.28); box-shadow: var(--sombra-elevada), 0 0 0 8px rgba(255, 255, 255, 0.05); transform: rotate(-1.2deg); }
+.pantalla img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.pantalla-barra { display: flex; align-items: center; gap: 0.4rem; padding: 0.6rem 0.9rem; background: var(--card); border-bottom: 1px solid var(--line); }
+.pantalla-barra span { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--line); }
+.pantalla-barra em { margin-left: 0.5rem; font-style: normal; font-size: var(--t-xs); font-weight: 700; color: var(--muted); }
+.hero-sello { position: absolute; left: clamp(-1rem, -1.5vw, 0rem); bottom: 0; display: inline-flex; align-items: center; gap: 0.55rem; max-width: calc(100% - 1rem); padding: 0.7rem 1.1rem 0.7rem 0.75rem; border-radius: var(--r-pill); background: var(--lime); color: var(--navy-deep); font-size: var(--t-sm); font-weight: 700; line-height: 1.25; box-shadow: var(--sombra-flotante); }
+.dentro-captura { margin: 0.5rem 0 0; }
+.dentro-captura .pantalla { transform: none; box-shadow: var(--sombra-tarjeta); border-color: var(--line); }
+.hero-sello svg { flex: none; width: 1.9rem; height: 1.9rem; padding: 0.45rem; border-radius: 50%; background: var(--navy); color: var(--lime); }
+
+/* ¿Te suena?: título a la izquierda, creencias a la derecha */
+@media (min-width: 881px) {
+  .suena .wrap { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); align-items: center; gap: clamp(2rem, 5vw, 4.5rem); }
+  .suena .frases { grid-template-columns: minmax(0, 1fr); max-width: none; }
+  .suena .frases li:nth-child(even) { margin-left: clamp(1.5rem, 3vw, 3rem); }
+}
+
+/* Frase de la docente: centrada */
+.cita { margin-inline: auto; justify-items: center; text-align: center; }
+.cita figcaption { text-align: left; }
+
+/* Encabezado del programa a dos columnas */
+@media (min-width: 881px) {
+  .encabezado-ancho { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); max-width: none; align-items: end; gap: 1rem clamp(2rem, 5vw, 4rem); }
+}
+
+/* Tarjetas de módulos: «Ver objetivos» siempre alineado abajo */
+.modulo { display: flex; flex-direction: column; gap: 0.55rem; }
+.modulo .modulo-extra { align-self: flex-start; }
+.modulo-mas { margin-top: auto; padding-top: 0.4rem; }
+.modulo-icono { margin-bottom: 0.35rem; }
+
+/* El curso por dentro: intro a la izquierda, materiales con íconos a la derecha */
+.incluye-banda .wrap { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.3fr); align-items: start; gap: clamp(2rem, 5vw, 4.5rem); }
+.dentro-intro { display: grid; gap: 1rem; position: sticky; top: 6rem; }
+.dentro-total { display: grid; gap: 0.2rem; margin-top: 0.75rem; padding: 1.25rem 1.4rem; border-radius: var(--r-md); background: var(--navy); color: var(--on-navy-soft); }
+.dentro-total strong { font-size: clamp(2.2rem, 4vw, 2.9rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--lime); font-variant-numeric: tabular-nums; }
+.incluye { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.25rem); }
+.incluye li { display: grid; gap: 0.45rem; align-content: start; padding: clamp(1.2rem, 2.4vw, 1.5rem); border: 1px solid var(--line); border-radius: var(--r-md); background: var(--paper); }
+.incluye-ico { display: grid; place-items: center; width: 3rem; height: 3rem; margin-bottom: 0.35rem; border-radius: var(--r-sm); background: var(--navy); color: var(--lime); }
+.incluye-ico svg { width: 1.6rem; height: 1.6rem; }
+.incluye h3 { font-size: var(--t-md); text-wrap: pretty; }
+.menu-abierta .barra-compra { display: none !important; }
+.incluye p { font-size: var(--t-base); }
+
+/* Testimonios: un solo bloque de prueba social en grilla de 2 × 2 */
+.docente-testimonios { margin-top: clamp(1rem, 3vw, 2rem); }
+.docente-testimonios .testimonio-etiqueta { grid-column: 1 / -1; }
+
+/* Menú en celular */
+.menu-boton { display: none; }
+@media (max-width: 880px) {
+  .incluye-banda .wrap { grid-template-columns: minmax(0, 1fr); }
+  .dentro-intro { position: static; }
+  .hero-video { max-width: 34rem; }
+  .pantalla { transform: none; }
+  .con-menu .menu-boton { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.75rem; padding: 0.4rem 0.9rem 0.4rem 0.7rem; border: 1px solid var(--line); border-radius: var(--r-pill); background: var(--white); color: var(--navy); font: inherit; font-size: var(--t-sm); font-weight: 700; cursor: pointer; }
+  .menu-boton svg path { transition: transform 0.2s ease, opacity 0.2s ease; transform-origin: 12px 12px; }
+  .menu-boton[aria-expanded="true"] .l1 { transform: translateY(5px) rotate(45deg); }
+  .menu-boton[aria-expanded="true"] .l2 { opacity: 0; }
+  .menu-boton[aria-expanded="true"] .l3 { transform: translateY(-5px) rotate(-45deg); }
+  .cabecera .wrap { flex-wrap: wrap; }
+  .con-menu .menu { display: none; }
+  .con-menu .menu.abierto { display: grid; flex-basis: 100%; gap: 0; padding: 0.25rem 0 0.6rem; border-top: 1px solid var(--line); }
+  .con-menu .menu.abierto a:not(.btn) { display: block; padding: 0.85rem 0.25rem; border-bottom: 1px solid var(--line); font-size: var(--t-base); }
+  .con-menu .menu.abierto .btn { display: inline-flex; margin-top: 0.8rem; }
+}
+/* Celulares muy angostos: el botón de menú queda solo con el ícono */
+@media (max-width: 380px) {
+  .menu-boton span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .con-menu .menu-boton { padding: 0.4rem 0.7rem; }
+  .marca { font-size: var(--t-sm); }
+}
+
+/* ── Pulido (20/11/2026) ── */
+
+/* Superficies del navegador con los colores de la marca */
+::selection { background: var(--lime); color: var(--navy-deep); }
+html { accent-color: var(--teal); caret-color: var(--teal); scrollbar-color: var(--navy-soft) var(--card); }
+.btn:active, .copiar:active, .modulo-mas summary:active, .regiones button:active, .menu-boton:active { transform: scale(0.98); }
+.btn, .copiar, .regiones button { transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.15s ease, border-color 0.15s ease; }
+
+/* Hero: datos clave como línea con íconos, debajo de las acciones */
+.hero-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; margin-top: 0.25rem; }
+.hero-meta li { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--t-sm); font-weight: 600; color: var(--on-navy-soft); }
+.hero-meta svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: var(--lime); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.hero-meta svg path[fill] { fill: var(--lime); stroke: none; }
+.hero-texto { gap: 1.1rem; }
+.hero h1 { margin-bottom: 0.15rem; }
+
+/* ¿Te suena? como inicio de la bajada */
+.bajada .pregunta { color: var(--navy); font-weight: 800; }
+
+/* Partes del programa: el título manda, el rango de módulos acompaña */
+.parte-cab > div { display: grid; gap: 0.15rem; }
+.parte-etiqueta { font-size: var(--t-sm); font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--muted); }
+
+/* Testimonios: borde completo y comilla de apertura en lugar de la barra lateral */
+.testimonio-linea { position: relative; border: 1px solid var(--line); border-radius: var(--r-md); padding: 1.4rem 1.5rem 1.3rem 4.1rem; box-shadow: var(--sombra-tarjeta); }
+.testimonio-linea::before { content: ''; position: absolute; left: 1.2rem; top: 1.15rem; width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--navy-deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B2DC3A'%3E%3Cpath d='M10 7H6.5A2.5 2.5 0 0 0 4 9.5V13a2 2 0 0 0 2 2h2.2c-.2 1.3-1 2.2-2.4 2.7l.6 1.5C9 18.4 10 16.3 10 13.5zm10 0h-3.5A2.5 2.5 0 0 0 14 9.5V13a2 2 0 0 0 2 2h2.2c-.2 1.3-1 2.2-2.4 2.7l.6 1.5c2.6-.8 3.6-2.9 3.6-5.7z'/%3E%3C/svg%3E") center / 1.1rem no-repeat; }
+.testimonios-titulo { grid-column: 1 / -1; font-size: var(--t-lg); font-weight: 800; }
+
+/* Avisos: tinte y borde completos, con ícono al inicio */
+.requisito, .aviso-gmail { position: relative; border-left: 0; border-radius: var(--r-sm); padding: 1rem 1.15rem 1rem 3.1rem; }
+.requisito::before, .aviso-gmail::before { content: ''; position: absolute; left: 1.05rem; top: 1.05rem; width: 1.3rem; height: 1.3rem; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9.5'/%3E%3Cpath d='M12 11v6M12 7.5v.01'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9.5'/%3E%3Cpath d='M12 11v6M12 7.5v.01'/%3E%3C/svg%3E") center / contain no-repeat; }
+.requisito { border: 1px solid var(--line); }
+.sobre-navy .requisito { border: 1px solid rgba(255, 255, 255, 0.16); }
+.sobre-navy .requisito::before { color: var(--teal-light); }
+.aviso-gmail { border: 1px solid rgba(178, 220, 58, 0.45); }
+.aviso-gmail::before { color: var(--lime); }
+
+/* El curso por dentro: lista con separadores en lugar de cuatro tarjetas iguales */
+.incluye { grid-template-columns: minmax(0, 1fr); gap: 0; border-top: 1px solid var(--line); }
+.incluye li { grid-template-columns: 3rem minmax(0, 1fr); gap: 0.25rem 1.25rem; padding: 1.4rem 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: none; }
+.incluye-ico { grid-row: span 2; margin: 0; }
+.incluye h3 { align-self: center; font-size: var(--t-md); }
+.incluye p { grid-column: 2; max-width: 36rem; }
+
+@media (max-width: 640px) {
+  .testimonio-linea { padding: 3.6rem 1.2rem 1.2rem; }
+  .testimonio-linea::before { top: 1.2rem; }
+  .incluye li { grid-template-columns: 2.6rem minmax(0, 1fr); column-gap: 0.9rem; }
+  .incluye-ico { width: 2.6rem; height: 2.6rem; }
+  .incluye p { grid-column: 1 / -1; }
+}
+
+@media (max-width: 640px) {
+  .hero-sello { position: relative; left: 0; margin-top: -1rem; font-size: var(--t-xs); }
+  .hero-video { padding-bottom: 0; }
+}
+</style>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<a class="saltar" href="#comprar">Saltar a la inscripción</a>
+
+<header class="cabecera">
+  <div class="wrap">
+    <a class="marca" href="https://soysuperdotadoweb.com" aria-label="Soy Superdotado, ir al sitio">
+      <img src="img/logo-soy-superdotado.png" alt="" width="40" height="40">
+      <span>Soy Superdotado</span>
+    </a>
+    <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-secciones" hidden>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg>
+      <span>Menú</span>
+    </button>
+    <nav class="menu" id="menu-secciones" aria-label="Secciones">
+      <a href="#programa">Programa</a>
+      <a href="#incluye">Por dentro</a>
+      <a href="#certificado">Certificado</a>
+      <a href="#docente">Docente</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-navy" href="#comprar">Inscribirme</a>
+    </nav>
+  </div>
+  <div class="progreso" aria-hidden="true"></div>
+</header>
+
+<main id="contenido" tabindex="-1">
+
+<section class="hero sobre-navy">
+  <div class="wrap hero-principal">
+    <div class="hero-texto">
+      <h1>Desarrollo socioafectivo <em class="acento">en estudiantes con alta capacidad.</em></h1>
+      <p class="hero-tema">Su integración en el currículo escolar</p>
+      <p class="bajada">Nueve módulos en video con la Lic. Gretel Hernández sobre las necesidades socioemocionales de este alumnado y las estrategias e instrumentos para abordarlas en el aula y en la planificación escolar.</p>
+      <div class="acciones">
+        <a class="btn btn-lime" href="#comprar">Inscribirme
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-linea" href="#programa">Ver el programa</a>
+      </div>
+      <ul class="hero-meta">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg>Curso asincrónico en video</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 21l5-2.5 5 2.5-1.5-8"/></svg>Con certificado</li>
+      </ul>
+    </div>
+    <figure class="hero-foto">
+      <img src="img/portada-aula.jpg" alt="Una docente sonríe mientras acompaña a un alumno que lee un libro en el aula." width="1188" height="891" fetchpriority="high" decoding="async">
+    </figure>
+  </div>
+  <div class="wrap">
+    <dl class="ficha">
+      <div><dt>Modalidad</dt><dd>En video, sin fechas ni horarios<span class="nota">Acceso por 90 días</span><span class="nota">Requiere cuenta de Google</span></dd></div>
+      <div><dt>Contenido</dt><dd>9 módulos en 3 partes<span class="nota">2 h 33 min de video</span><span class="nota">Carga horaria: 9 horas</span></dd></div>
+      <div><dt>Material de trabajo</dt><dd>3 guías de estudio en PDF<span class="nota">con cuadros, herramientas y lecturas complementarias</span></dd></div>
+      <div><dt>Valor</dt><dd><span class="precios"><span data-precio="ar">ARS 89.000</span><span data-precio="lat">USD 79</span><span data-precio="eu">EUR 79</span></span><span class="nota">Según la región</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="seccion suena" id="te-suena" aria-labelledby="t-suena">
+  <div class="wrap">
+    <div class="encabezado">
+      <h2 id="t-suena">«Ya hicimos el enriquecimiento, y sigue siendo disruptivo. No le encontramos la vuelta.»</h2>
+      <p class="bajada"><strong class="pregunta">¿Te suena?</strong> Es una frase que la Lic. Gretel Hernández escucha a menudo en las reuniones con escuelas. Detrás suelen aparecer creencias que siguen vigentes:</p>
+    </div>
+    <ul class="frases">
+      <li>«Si ya le dimos más desafío, lo demás es tema de actitud.»</li>
+      <li>«Si es tan brillante, debería saber comportarse y respetar las normas.»</li>
+      <li>«Con la aceleración o el enriquecimiento alcanza.»</li>
+      <li>«Son más inteligentes: se arreglan solos.»</li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccion dirigido sin-aire" id="para-quien" aria-labelledby="t-quien">
+  <div class="wrap">
+    <div class="dirigido-texto">
+      <h2 id="t-quien">¿A quién va dirigido?</h2>
+      <ul class="publico">
+        <li>Profesionales de la educación, la salud y el ámbito socioeducativo interesados en el desarrollo socioafectivo de estudiantes con altas capacidades intelectuales y sus implicancias en la práctica educativa.</li>
+        <li>Docentes, directivos, equipos de orientación escolar, profesionales de apoyo y especialistas en diseño y planificación curricular.</li>
+        <li>Estudiantes avanzados de carreras universitarias y terciarias vinculadas con la educación, la psicología, la psicopedagogía, la salud y la intervención socioeducativa.</li>
+        <li>Personas interesadas en la temática.</li>
+      </ul>
+    </div>
+    <div class="busca">
+      <h3>Qué busca el curso</h3>
+      <ul>
+        <li>Comprender la dimensión socioafectiva y por qué integrarla al currículo.</li>
+        <li>Contar con estrategias e instrumentos prácticos para la escuela.</li>
+        <li>Asumir el rol del docente u orientador como agente de cambio.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cita-banda sobre-navy" aria-label="Palabras de la docente">
+  <div class="wrap">
+    <figure class="cita">
+      <blockquote><p>«Estos estudiantes merecen una educación donde sean desafiados y animados a desarrollar su potencial.»</p></blockquote>
+      <figcaption>
+        <img src="img/gretel-retrato.jpg" alt="" width="240" height="240" loading="lazy" decoding="async">
+        <span><strong>Lic. Gretel Hernández</strong>En el cierre del curso</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="seccion" id="programa" aria-labelledby="t-programa">
+  <div class="wrap">
+    <div class="encabezado encabezado-ancho">
+      <h2 id="t-programa">Nueve módulos en tres partes: de comprender a acompañar.</h2>
+      <p class="bajada">Mira primero el video de cada módulo. La guía de estudio suma los objetivos, las ideas clave con el minuto del video en que se desarrollan y propuestas para tu práctica.</p>
+    </div>
+    <div class="partes">
+    <div class="parte">
+      <div class="parte-cab"><span class="parte-num" aria-hidden="true">1</span><div><h3 class="parte-titulo"><span class="solo-lectores">Parte 1: </span>La dimensión socioafectiva y su integración al currículo</h3><p class="parte-etiqueta">Módulos 1 a 3</p></div></div>
+      <ol class="modulos de-3" start="1">
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M232,102c0,66-104,122-104,122S24,168,24,102A54,54,0,0,1,78,48c22.59,0,41.94,12.31,50,32,8.06-19.69,27.41-32,50-32A54,54,0,0,1,232,102Z" class="ico-tinte"/><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/></svg></div>
+        <p class="modulo-meta">Módulo 1 <span class="duracion">20 min</span></p>
+        <h3>La dimensión socioafectiva en las altas capacidades</h3>
+        <p class="modulo-logro">Características, necesidades y por qué incluir lo afectivo en el currículo.</p>
+        <p class="modulo-extra">Incluye el Cuadro 1 y la ficha de un artículo que revisa 14 estudios.</p>
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Reconocer las características socioafectivas de los estudiantes con altas capacidades, sus necesidades y los problemas que pueden aparecer en la escuela.</li><li>Identificar las razones por las que las escuelas suelen descuidar el dominio afectivo.</li><li>Fundamentar, con aportes de la investigación, por qué incluir la educación afectiva en el currículo.</li></ul>
+        </details>
+      </li>
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M240,112l-33.62,37.35a8,8,0,0,1-5.94,2.65H40a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8H200.44a8,8,0,0,1,5.94,2.65Z" class="ico-tinte"/><path d="M246,106.65,212.33,69.3A16,16,0,0,0,200.44,64H136V32a8,8,0,0,0-16,0V64H40A16,16,0,0,0,24,80v64a16,16,0,0,0,16,16h80v64a8,8,0,0,0,16,0V160h64.44a16,16,0,0,0,11.89-5.3L246,117.35A8,8,0,0,0,246,106.65ZM200.44,144H40V80H200.44l28.8,32Z"/></svg></div>
+        <p class="modulo-meta">Módulo 2 <span class="duracion">22 min</span></p>
+        <h3>Tres enfoques curriculares</h3>
+        <p class="modulo-logro">Enfoques proactivo, reactivo e integrador del currículo afectivo.</p>
+        
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Distinguir los tres enfoques del currículo afectivo: proactivo, reactivo e integrador.</li><li>Reconocer los desafíos del desarrollo que atraviesan los estudiantes con altas capacidades en cada nivel escolar.</li><li>Identificar recursos concretos para cada enfoque: trabajo en grupo, orientación vocacional, derivación, paneles y apoyo a las familias.</li></ul>
+        </details>
+      </li>
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M208,48V216a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H96a39.83,39.83,0,0,0-8,24v8h80V64a39.83,39.83,0,0,0-8-24h40A8,8,0,0,1,208,48Z" class="ico-tinte"/><path d="M168,152a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,152Zm-8-40H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm56-64V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V48A16,16,0,0,1,56,32H92.26a47.92,47.92,0,0,1,71.48,0H200A16,16,0,0,1,216,48ZM96,64h64a32,32,0,0,0-64,0ZM200,48H173.25A47.93,47.93,0,0,1,176,64v8a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8V64a47.93,47.93,0,0,1,2.75-16H56V216H200Z"/></svg></div>
+        <p class="modulo-meta">Módulo 3 <span class="duracion">13 min</span></p>
+        <h3>Cómo armar un programa socioafectivo eficaz</h3>
+        <p class="modulo-logro">Componentes del programa, plan afectivo individual y educación emocional en el aula.</p>
+        
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Reconocer las características y los componentes de un programa afectivo para estudiantes con altas capacidades.</li><li>Pensar metas, estrategias y formas de evaluación para un plan afectivo individual (DEI o PPI).</li><li>Aplicar en el aula herramientas de educación emocional: la escritura sobre las emociones, la identificación de sensaciones, pensamientos e impulsos, y las zonas de regulación.</li></ul>
+        </details>
+      </li>
+      </ol>
+    </div>
+    <div class="parte">
+      <div class="parte-cab"><span class="parte-num" aria-hidden="true">2</span><div><h3 class="parte-titulo"><span class="solo-lectores">Parte 2: </span>Estrategias e instrumentos prácticos</h3><p class="parte-etiqueta">Módulos 4 a 7</p></div></div>
+      <ol class="modulos de-4" start="4">
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M192,144a64.33,64.33,0,0,1-2,16H66a64,64,0,1,1,126-16Z" class="ico-tinte"/><path d="M240,152H199.55a73.54,73.54,0,0,0,.45-8,72,72,0,0,0-144,0,73.54,73.54,0,0,0,.45,8H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM72,144a56,56,0,1,1,111.41,8H72.59A56.13,56.13,0,0,1,72,144Zm144,56a8,8,0,0,1-8,8H48a8,8,0,0,1,0-16H208A8,8,0,0,1,216,200ZM72.84,43.58a8,8,0,0,1,14.32-7.16l8,16a8,8,0,0,1-14.32,7.16Zm-56,48.84a8,8,0,0,1,10.74-3.57l16,8a8,8,0,0,1-7.16,14.31l-16-8A8,8,0,0,1,16.84,92.42Zm192,15.16a8,8,0,0,1,3.58-10.73l16-8a8,8,0,1,1,7.16,14.31l-16,8a8,8,0,0,1-10.74-3.58Zm-48-55.16,8-16a8,8,0,0,1,14.32,7.16l-8,16a8,8,0,1,1-14.32-7.16Z"/></svg></div>
+        <p class="modulo-meta">Módulo 4 <span class="duracion">26 min</span></p>
+        <h3>Clima del aula y rasgos socioafectivos</h3>
+        <p class="modulo-logro">Normas en positivo, los rasgos de Lovecky y las sobreexcitabilidades de Dabrowski.</p>
+        <p class="modulo-extra">Incluye los Cuadros 2 y 3.</p>
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Generar un clima de aula de aceptación, con normas formuladas en positivo.</li><li>Reconocer los cinco rasgos afectivos que describe Lovecky y elegir estrategias de aclimatación para cada uno.</li><li>Identificar las sobreexcitabilidades de Dabrowski y acompañarlas en la escuela.</li></ul>
+        </details>
+      </li>
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M224,127.17a96.48,96.48,0,0,1-2.39,22.18A24,24,0,0,1,198.21,168H152a24,24,0,0,0-24,24,24,24,0,0,1-32,22.61C58.73,201.44,32,169.81,32,128a96,96,0,0,1,95-96C179.84,31.47,223.55,74.35,224,127.17Z" class="ico-tinte"/><path d="M200.77,53.89A103.27,103.27,0,0,0,128,24h-1.07A104,104,0,0,0,24,128c0,43,26.58,79.06,69.36,94.17A32,32,0,0,0,136,192a16,16,0,0,1,16-16h46.21a31.81,31.81,0,0,0,31.2-24.88,104.43,104.43,0,0,0,2.59-24A103.28,103.28,0,0,0,200.77,53.89Zm13,93.71A15.89,15.89,0,0,1,198.21,160H152a32,32,0,0,0-32,32,16,16,0,0,1-21.31,15.07C62.49,194.3,40,164,40,128a88,88,0,0,1,87.09-88h.9a88.35,88.35,0,0,1,88,87.25A88.86,88.86,0,0,1,213.81,147.6ZM140,76a12,12,0,1,1-12-12A12,12,0,0,1,140,76ZM96,100A12,12,0,1,1,84,88,12,12,0,0,1,96,100Zm0,56a12,12,0,1,1-12-12A12,12,0,0,1,96,156Zm88-56a12,12,0,1,1-12-12A12,12,0,0,1,184,100Z"/></svg></div>
+        <p class="modulo-meta">Módulo 5 <span class="duracion">14 min</span></p>
+        <h3>Recursos para lo afectivo</h3>
+        <p class="modulo-logro">Artes, biblioterapia, cinematerapia y recursos de autoconocimiento.</p>
+        <p class="modulo-extra">Incluye guías de muestra de biblioterapia y cinematerapia, citas y consignas de escritura.</p>
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Usar las artes como vía de acceso al dominio afectivo, tanto en forma individual como grupal.</li><li>Planificar actividades de biblioterapia y de cinematerapia para acompañar la autocomprensión.</li><li>Incorporar en la clase recursos de autoconocimiento: afirmaciones abiertas, vocabulario de sentimientos, citas, biografías y escritura.</li></ul>
+        </details>
+      </li>
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M128,32a96,96,0,1,0,96,96A96,96,0,0,0,128,32Zm16,112L80,176l32-64,64-32Z" class="ico-tinte"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM172.42,72.84l-64,32a8.05,8.05,0,0,0-3.58,3.58l-32,64A8,8,0,0,0,80,184a8.1,8.1,0,0,0,3.58-.84l64-32a8.05,8.05,0,0,0,3.58-3.58l32-64a8,8,0,0,0-10.74-10.74ZM138,138,97.89,158.11,118,118l40.15-20.07Z"/></svg></div>
+        <p class="modulo-meta">Módulo 6 <span class="duracion">11 min</span></p>
+        <h3>Autonomía y motivación según Delisle</h3>
+        <p class="modulo-logro">Locus de control, tomar un riesgo y arriesgarse, y aprendizaje-servicio.</p>
+        <p class="modulo-extra">Incluye dos lecturas traducidas completas: Delisle y Gail Post.</p>
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Reconocer el locus de control de los estudiantes y su relación con el bajo rendimiento.</li><li>Distinguir entre tomar un riesgo y arriesgarse, y entre autoimagen y autoestima, para conversar con los alumnos.</li><li>Valorar el aprendizaje-servicio como un modo de canalizar la sensibilidad social de los estudiantes con altas capacidades.</li></ul>
+        </details>
+      </li>
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M168,144a40,40,0,1,1-40-40A40,40,0,0,1,168,144ZM64,56A32,32,0,1,0,96,88,32,32,0,0,0,64,56Zm128,0a32,32,0,1,0,32,32A32,32,0,0,0,192,56Z" class="ico-tinte"/><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1,0-16,24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.85,8,57,57,0,0,0-98.15,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/></svg></div>
+        <p class="modulo-meta">Módulo 7 <span class="duracion">17 min</span></p>
+        <h3>Habilidades sociales: ver, pensar y hacer</h3>
+        <p class="modulo-logro">Rechazo de los pares, figuras de autoridad y afrontamiento del estrés.</p>
+        
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Reconocer los tres procesos de las habilidades sociales (ver, pensar y hacer) y cómo acompañarlos.</li><li>Aplicar ideas para evitar o aliviar el rechazo y para orientar la relación con las figuras de autoridad.</li><li>Enseñar a identificar el estrés y a desarrollar estrategias de afrontamiento y de prevención.</li></ul>
+        </details>
+      </li>
+      </ol>
+    </div>
+    <div class="parte">
+      <div class="parte-cab"><span class="parte-num" aria-hidden="true">3</span><div><h3 class="parte-titulo"><span class="solo-lectores">Parte 3: </span>El docente u orientador como agente de cambio</h3><p class="parte-etiqueta">Módulos 8 y 9</p></div></div>
+      <ol class="modulos de-2" start="8">
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M192,80v96H104a32,32,0,1,0-32-32H64V80Z" class="ico-tinte"/><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H53.39a8,8,0,0,0,7.23-4.57,48,48,0,0,1,86.76,0,8,8,0,0,0,7.23,4.57H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM80,144a24,24,0,1,1,24,24A24,24,0,0,1,80,144Zm136,56H159.43a64.39,64.39,0,0,0-28.83-26.16,40,40,0,1,0-53.2,0A64.39,64.39,0,0,0,48.57,200H40V56H216ZM56,96V80a8,8,0,0,1,8-8H192a8,8,0,0,1,8,8v96a8,8,0,0,1-8,8H176a8,8,0,0,1,0-16h8V88H72v8a8,8,0,0,1-16,0Z"/></svg></div>
+        <p class="modulo-meta">Módulo 8 <span class="duracion">16 min</span></p>
+        <h3>El docente como agente de cambio</h3>
+        <p class="modulo-logro">Qué caracteriza a un profesor eficaz y cinco estrategias para ser más accesible.</p>
+        
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Identificar las características de los profesores eficaces para estudiantes con altas capacidades.</li><li>Enseñar a los estudiantes pautas prácticas para hablar con sus maestros y defender sus necesidades.</li><li>Aplicar las cinco estrategias de Delisle para ser un educador más accesible.</li></ul>
+        </details>
+      </li>
+      <li class="modulo">
+        <div class="modulo-icono" aria-hidden="true"><svg class="ico" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M138.54,149.46C106.62,96.25,149.18,43.05,239.63,48.37,245,138.82,191.75,181.39,138.54,149.46ZM16.26,88.26c-3.8,64.61,34.21,95,72.21,72.21C111.27,122.47,80.87,84.46,16.26,88.26Z" class="ico-tinte"/><path d="M247.63,47.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.48-11.78,43.16-.16,65.74a71.37,71.37,0,0,0-14.17,26.95L98.33,159c7.82-16.33,7.52-33.36-1-47.49C84.09,89.73,53.62,78,15.79,80.27a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,176,54.58,54.58,0,0,0,87,170.33l25,25V224a8,8,0,0,0,16,0V194.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,141.21,250.67,99.65,247.63,47.89ZM86.06,146.74l-24.41-24.4a8,8,0,0,0-11.31,11.31l24.41,24.41c-9.61,3.18-18.93,2.39-26.94-2.46C32.47,146.31,23.79,124.32,24,96c28.31-.25,50.31,8.47,59.6,23.81C88.45,127.82,89.24,137.14,86.06,146.74Zm111.06-1.36c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.32L140.65,136c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.8,89.33-34.83C232.94,98.34,220.14,131.44,197.12,145.38Z"/></svg></div>
+        <p class="modulo-meta">Módulo 9 <span class="duracion">15 min</span></p>
+        <h3>Mentorías y desarrollo de la identidad</h3>
+        <p class="modulo-logro">Formas de mentoría, cómo elegir un mentor, identidad y autonomía.</p>
+        <p class="modulo-extra">Incluye el proyecto de estudio de interés personal y su acuerdo.</p>
+        <details class="modulo-mas">
+          <summary>Ver objetivos</summary>
+          <p>Al finalizar el módulo, podrás:</p>
+          <ul class="objetivos"><li>Comprender qué es una mentoría, qué formas puede tomar y qué beneficios aporta.</li><li>Considerar las preguntas clave para elegir un mentor y las funciones que puede cumplir.</li><li>Fomentar la identidad, la autonomía y la autoestima de los estudiantes con altas capacidades.</li></ul>
+        </details>
+      </li>
+      </ol>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion incluye-banda" id="incluye" aria-labelledby="t-incluye">
+  <div class="wrap">
+    <div class="dentro-intro">
+      <h2 id="t-incluye">El curso por dentro</h2>
+      <p class="bajada">Videos breves para ver cuando puedas y guías para llevar cada idea a tu práctica.</p>
+      <p class="dentro-total"><strong>2 h 33 min</strong><span>de video, en módulos de 11 a 26 minutos</span></p>
+      <figure class="dentro-captura">
+        <div class="pantalla">
+          <div class="pantalla-barra" aria-hidden="true"><span></span><span></span><span></span><em>Módulo 9</em></div>
+          <img src="img/video-modulo.jpg" alt="Captura del módulo 9: la Lic. Gretel Hernández en cámara junto a una diapositiva sobre lo que se pierde cuando lo académico resulta fácil y requiere poco esfuerzo." width="1280" height="720" loading="lazy" decoding="async">
+        </div>
+      </figure>
+    </div>
+    <ul class="incluye">
+      <li>
+        <span class="incluye-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg></span>
+        <h3>9 módulos en video</h3>
+        <p>Con la Lic. Gretel Hernández en cámara y diapositivas.</p>
+      </li>
+      <li>
+        <span class="incluye-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
+        <h3>3 guías de estudio en PDF</h3>
+        <p>Una por parte: objetivos, ideas clave con el minuto del video y propuestas para tu práctica. Puedes imprimirlas o completarlas en la pantalla.</p>
+      </li>
+      <li>
+        <span class="incluye-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H9a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5h-5A1.5 1.5 0 0 1 3 16z"/><path d="M21 5.5A1.5 1.5 0 0 0 19.5 4H15a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5h5a1.5 1.5 0 0 0 1.5-1.5z"/></svg></span>
+        <h3>3 lecturas complementarias</h3>
+        <p>Con su ficha de síntesis, dentro de las guías: un artículo de Algaba-Mesa y Fernández-Marcos que revisa 14 estudios, y las traducciones completas de Delisle y Gail Post.</p>
+      </li>
+      <li>
+        <span class="incluye-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 10h18M10 10v10"/></svg></span>
+        <h3>3 cuadros de consulta</h3>
+        <p>Y herramientas para el aula: guías de muestra de biblioterapia y cinematerapia, citas, consignas de escritura y el proyecto de estudio de interés personal.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccion certificado" id="certificado" aria-labelledby="t-certificado">
+  <div class="wrap">
+    <div class="encabezado">
+      <h2 id="t-certificado">Certificado del curso</h2>
+      <p class="bajada">El certificado está incluido en el precio y es <strong>opcional</strong>: puedes hacer el curso completo sin rendir la evaluación. Si quieres certificarlo, al terminar los nueve módulos realizas una evaluación final. El certificado acredita una carga horaria de 9 horas, que incluye los videos, las guías y las propuestas de práctica. Las actividades propuestas en las tres guías no se califican.</p>
+    </div>
+    <div>
+      <ol class="cert-pasos">
+        <li><strong>Completa la evaluación final</strong><span>De opción múltiple, sobre los contenidos de los nueve módulos. Se aprueba con el 70&nbsp;%.</span></li>
+        <li><strong>Recibes tu certificado</strong><span>En PDF, por correo electrónico.</span></li>
+      </ol>
+      <p class="cert-nota"><strong>Nota:</strong> la certificación es de carácter privado, emitida por la Lic. Gretel Hernández. Acredita la adquisición de conocimientos prácticos y la finalización exitosa del curso.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion docente" id="docente" aria-labelledby="t-docente">
+  <div class="wrap">
+    <img src="img/gretel-hernandez.jpg" alt="Lic. Gretel Hernández" width="705" height="637" loading="lazy" decoding="async">
+    <div class="docente-texto">
+      <div class="docente-nombre">
+        <h2 id="t-docente">Lic. Gretel Hernández</h2>
+        <p>Psicóloga clínica · MP 81977</p>
+      </div>
+      <p>Especializada en la identificación y la atención psicoterapéutica de personas con altas capacidades y otras neurodivergencias.</p>
+      <ul class="credenciales">
+        <li>Psicóloga clínica (UCA, Argentina), con orientación cognitivo-conductual y enfoque familiar, informado en trauma.</li>
+        <li>Experta universitaria en intervención psicoeducativa en altas capacidades (CEU Cardenal Herrera, España).</li>
+        <li>Integra el Directorio de Proveedores de Salud Mental de SENG, Supporting Emotional Needs of the Gifted (EE. UU.).</li>
+        <li>Profesora de enseñanza secundaria, normal y especial en Psicología (UCA).</li>
+        <li>Experiencia docente como maestra de música en el nivel inicial y primario, y como profesora en el nivel medio y universitario.</li>
+      </ul>
+      <p>Investigación y diseño de la propuesta: Lic. Gretel Hernández y Federico Nicolás Ayala Handji, Soy Superdotado.</p>
+    </div>
+    <div class="docente-testimonios">
+      <h3 class="testimonios-titulo">Lo que dicen quienes participaron en sus talleres</h3>
+      <figure class="testimonio-linea">
+        <blockquote><p>«Querida Gretel, como te lo he mencionado en otra oportunidad, tus talleres son como pequeños libros virtuales que quisiera tener a mano siempre. Llenos de tips, consejos y experiencias.»</p></blockquote>
+        <figcaption>Participante de talleres anteriores</figcaption>
+      </figure>
+      <figure class="testimonio-linea">
+        <blockquote><p>«Soy de Brasil y veo que sus aportes son muy avanzados, claros y valiosos para quien participa. ¡Me gustó bastante! Los pioneros en Latinoamérica, por lo que he buscado todos estos años sobre este tema.»</p></blockquote>
+        <figcaption>Participante de talleres anteriores, desde Brasil</figcaption>
+      </figure>
+      <figure class="testimonio-linea">
+        <blockquote><p>«Participé en tres talleres y encontré lo que buscaba. La Lic. Gretel transmite sus conocimientos de una manera cercana, sencilla, clara y práctica. Me han ayudado muchísimo sus consejos para nuestra vida familiar. Sumamente agradecida por el espacio, y recomiendo a otros que se animen a participar en estos encuentros de sumo valor.»</p></blockquote>
+        <figcaption>Participante de tres talleres de la Lic. Gretel Hernández</figcaption>
+      </figure>
+      <figure class="testimonio-linea">
+        <blockquote><p>«Entrega, claridad y mucha dedicación, pero sin lugar a dudas la calidad humana que acompaña toda la asertividad de los datos, experiencias e investigación es lo que hace de sus aportes algo invaluable e indispensable. ¡Gracias, Gretel!»</p></blockquote>
+        <figcaption>Participante de talleres anteriores</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="seccion sobre-navy comprar" id="comprar" aria-labelledby="t-comprar">
+  <div class="wrap">
+    <div class="comprar-texto">
+      <h2 id="t-comprar">Inscripción y acceso</h2>
+      <ol class="pasos" id="pasos-manual">
+        <li><strong>Elige tu región y paga</strong><span>Transferencia en Argentina, PayPal en el resto de América, PayPal o transferencia SEPA en Europa.</span></li>
+        <li><strong>Completa el formulario</strong><span>Con tu cuenta de Google (Gmail o institucional): tus datos y el comprobante de pago adjunto. Al enviarlo recibes una confirmación por correo.</span></li>
+        <li><strong>Recibes el acceso</strong><span>En un máximo de 24 horas te llega por correo el enlace de Google Drive con los videos y el material. Si no lo ves, revisa Spam y Promociones.</span></li>
+      </ol>
+      <p class="requisito"><strong>Quiénes pueden inscribirse:</strong> profesionales, estudiantes y personas interesadas en la temática.</p>      <div class="aviso-gmail" role="note">
+        <p><strong>Importante: necesitas una cuenta de Google</strong></p>
+        <p>El material se ve en Google Drive. Sirve una cuenta de <strong>Gmail</strong> o un <strong>correo institucional que se abre con Gmail</strong>, como el de muchas universidades y escuelas. Si tu correo es de Hotmail, Outlook, Yahoo u otro servicio, <a href="https://accounts.google.com/signup" target="_blank" rel="noopener">crea una cuenta de Gmail gratis aquí</a> antes de inscribirte; lleva dos minutos.</p>
+      </div>
+      <ol class="pasos" id="pasos-auto" hidden>
+        <li><strong>Elige tu región</strong><span>El precio se muestra en tu moneda.</span></li>
+        <li><strong>Paga en línea</strong><span>En la plataforma de pago, con los medios disponibles en tu país.</span></li>
+        <li><strong>Recibes el acceso al instante</strong><span>Te llega por correo apenas se confirma el pago.</span></li>
+      </ol>
+      <div class="resumen">
+        <h3>Qué recibes</h3>
+        <ul>
+          <li>9 módulos en video</li>
+          <li>3 guías de estudio en PDF, con cuadros, herramientas y lecturas</li>
+          <li>Evaluación final y certificado en PDF (opcionales)</li>
+          <li>Acceso a los videos por 90 días; los PDF se descargan y quedan para ti</li>
+        </ul>
+        <p>Consultas: <a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="caja" id="caja-compra">
+      <div class="regiones" role="tablist" aria-label="Tu región" id="regiones" hidden>
+        <button type="button" role="tab" id="tab-ar" aria-controls="region-ar" aria-selected="true">Argentina</button>
+        <button type="button" role="tab" id="tab-lat" aria-controls="region-lat" aria-selected="false" tabindex="-1">América y EE.&nbsp;UU.</button>
+        <button type="button" role="tab" id="tab-eu" aria-controls="region-eu" aria-selected="false" tabindex="-1">Europa</button>
+      </div>
+
+      <div class="region" id="region-ar" role="tabpanel" aria-labelledby="tab-ar" data-region="ar">
+        <div class="region-precio">
+          <h3>Argentina</h3>
+          <p class="monto" data-precio="ar">ARS 89.000</p>
+        </div>
+        <div class="manual">
+          <div class="metodo">
+            <h4>Transferencia bancaria</h4>
+            <dl class="datos-pago">
+              <div class="dato"><dt>Alias</dt><dd><span class="valor">cursosd</span><button class="copiar" type="button" data-copiar="cursosd" aria-label="Copiar alias">Copiar</button></dd></div>
+              <div class="dato"><dt>CVU</dt><dd><span class="valor">0000003100091638734429</span><button class="copiar" type="button" data-copiar="0000003100091638734429" aria-label="Copiar CVU">Copiar</button></dd></div>
+              <div class="dato"><dt>Titular</dt><dd><span class="valor">Federico Nicolás Ayala Handji<small>CUIL 20-25613786-1</small></span><button class="copiar" type="button" data-copiar="Federico Nicolás Ayala Handji" aria-label="Copiar titular">Copiar</button></dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="auto" hidden><a class="btn btn-navy" data-checkout="ar" href="#comprar" target="_blank" rel="noopener">Comprar ahora</a></div>
+      </div>
+
+      <div class="region" id="region-lat" role="tabpanel" aria-labelledby="tab-lat" data-region="lat">
+        <div class="region-precio">
+          <h3>Latinoamérica y EE.&nbsp;UU.</h3>
+          <p class="monto" data-precio="lat">USD 79</p>
+        </div>
+        <div class="manual">
+          <div class="metodo">
+            <h4>PayPal</h4>
+            <a class="btn btn-navy" data-paypal="lat" href="https://www.paypal.com/paypalme/soysuperdotado/79USD" target="_blank" rel="noopener">Pagar USD 79 con PayPal</a>
+          </div>
+        </div>
+        <div class="auto" hidden><a class="btn btn-navy" data-checkout="lat" href="#comprar" target="_blank" rel="noopener">Comprar ahora</a></div>
+      </div>
+
+      <div class="region" id="region-eu" role="tabpanel" aria-labelledby="tab-eu" data-region="eu">
+        <div class="region-precio">
+          <h3>Europa</h3>
+          <p class="monto" data-precio="eu">EUR 79</p>
+        </div>
+        <div class="manual">
+          <div class="metodo">
+            <h4>PayPal</h4>
+            <a class="btn btn-navy" data-paypal="eu" href="https://www.paypal.com/paypalme/soysuperdotado/79EUR" target="_blank" rel="noopener">Pagar EUR 79 con PayPal</a>
+          </div>
+          <div class="metodo" style="margin-top: 1.1rem">
+            <h4>O transferencia SEPA</h4>
+            <dl class="datos-pago">
+              <div class="dato"><dt>IBAN</dt><dd><span class="valor">MT25CFTE28004000000000005439757</span><button class="copiar" type="button" data-copiar="MT25CFTE28004000000000005439757" aria-label="Copiar IBAN">Copiar</button></dd></div>
+              <div class="dato"><dt>BIC</dt><dd><span class="valor">CFTEMTM1XXX</span><button class="copiar" type="button" data-copiar="CFTEMTM1XXX" aria-label="Copiar BIC">Copiar</button></dd></div>
+              <div class="dato"><dt>Titular</dt><dd><span class="valor">Federico Nicolas Ayala Handji<small>OpenPayd Financial Services Malta Ltd · IBAN virtual</small></span><button class="copiar" type="button" data-copiar="Federico Nicolas Ayala Handji" aria-label="Copiar titular">Copiar</button></dd></div>
+            </dl>
+            <p class="aviso">Solo transferencias SEPA, dentro de la Unión Europea. No se pueden recibir transferencias SWIFT.</p>
+          </div>
+        </div>
+        <div class="auto" hidden><a class="btn btn-navy" data-checkout="eu" href="#comprar" target="_blank" rel="noopener">Comprar ahora</a></div>
+      </div>
+
+      <div class="comprobante" id="comprobante">
+        <h3>Después de pagar, completa el formulario</h3>
+        <p>Ingresa con tu cuenta de Google, completa tus datos y adjunta el comprobante. El acceso se habilita para esa misma cuenta, dentro de las 24 horas. Si no ves nuestro correo en tu bandeja de entrada, revisa las carpetas Spam y Promociones.</p>
+        <a class="btn btn-lime" id="btn-formulario" href="https://docs.google.com/forms/d/e/1FAIpQLSc8R6g6vMcWXPqYPDidNB0iPm68EgQIyFDr1yzbSBeuWxbpxA/viewform" target="_blank" rel="noopener">Completar formulario de inscripción</a>
+        <div class="correo-fila">
+          <span class="correo-etiqueta">Consultas:</span>
+          <span class="correo" id="correo-texto">infocursosoysd@gmail.com</span>
+          <button class="copiar" type="button" id="copiar-correo" data-copiar="infocursosoysd@gmail.com" aria-label="Copiar la dirección de correo">Copiar</button>
+        </div>
+        <p class="titular-nota">Los pagos se reciben a nombre de Federico Nicolás Ayala Handji, coautor del curso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion preguntas" id="preguntas" aria-labelledby="t-preguntas">
+  <div class="wrap">
+    <div class="encabezado">
+      <h2 id="t-preguntas">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Puedo hacer el curso si no soy profesional ni estudiante del área?</summary>
+        <p>Sí. El curso está abierto a todas las personas interesadas en la temática. El certificado se obtiene con el mismo requisito para todos: aprobar la evaluación final sobre los contenidos de los nueve módulos.</p>
+      </details>
+      <details>
+        <summary>¿Es obligatorio hacer la evaluación?</summary>
+        <p>No. La evaluación es opcional: solo hace falta si quieres obtener el certificado. Puedes hacer el curso completo, con los videos y las guías, sin rendirla.</p>
+      </details>
+      <details>
+        <summary>¿Cómo y cuándo recibo el acceso?</summary>
+        <p>Después de completar el formulario recibes por correo, en un máximo de 24 horas, el enlace de Google Drive con todo el material. El correo llega desde infocursosoysd@gmail.com.</p>
+      </details>
+      <details>
+        <summary>¿Qué hago si no me llega el correo?</summary>
+        <p>Revisa las carpetas Spam y Promociones de tu correo: a veces los mensajes con enlaces terminan ahí. Para evitarlo, agrega infocursosoysd@gmail.com a tus contactos. Si pasaron más de 24 horas desde que completaste el formulario y no lo encuentras, escríbenos a <a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a> y te lo reenviamos.</p>
+      </details>
+      <details>
+        <summary>¿Por cuánto tiempo tengo acceso?</summary>
+        <p>Durante 90 días desde que recibes el acceso. Las guías de estudio puedes descargarlas: quedan para ti aunque venza el acceso a los videos.</p>
+      </details>
+      <details>
+        <summary>¿Qué necesito para acceder?</summary>
+        <p>Una cuenta de Google y conexión a internet. Sirve un Gmail o un correo institucional que se abre con Gmail. Con correos de Hotmail, Outlook o Yahoo no es posible acceder; en ese caso puedes crear un Gmail gratuito. Algunas instituciones bloquean los archivos compartidos desde fuera; si no puedes abrir el material con tu correo institucional, usa un Gmail personal.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tiempo necesito?</summary>
+        <p>Avanzas a tu ritmo dentro de los 90 días de acceso: puedes pausar, volver a ver los módulos y hacer las propuestas de la guía cuando quieras.</p>
+      </details>
+      <details>
+        <summary>¿Puedo compartir el acceso?</summary>
+        <p>El acceso es personal. Los videos y los materiales están protegidos por derechos de propiedad intelectual y no pueden reproducirse ni compartirse.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="barra-compra" id="barra-compra" hidden>
+  <p><span>Curso completo</span><strong id="barra-precio" data-precio="ar">ARS 89.000</strong></p>
+  <a class="btn btn-lime" href="#comprar">Inscribirme</a>
+</div>
+
+<footer class="pie">
+  <div class="wrap">
+    <div class="pie-cols">
+      <div>
+        <h2>Soy Superdotado</h2>
+        <p>Acompañamos a personas inteligentes, sensibles y divergentes a lo largo de su ciclo vital.</p>
+        <p><a href="https://soysuperdotadoweb.com">soysuperdotadoweb.com</a></p>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <p>Consultas sobre el curso:<br><a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a></p>
+      </div>
+      <div>
+        <h2>Una aclaración</h2>
+        <p>Si trabajas las propuestas del curso sobre un estudiante real, omite los datos que permitan identificarlo.</p>
+      </div>
+    </div>
+    <p class="pie-base">© 2026 Soysuperdotadoweb · Lic. Gretel Hernández y Federico Nicolás Ayala Handji · Se reservan los derechos de propiedad intelectual.</p>
+  </div>
+</footer>
+
+<script>
+/* ─────────────────────────────────────────────────────────────
+   CONFIGURACIÓN — lo único que hace falta tocar para actualizar
+   precios o pasar a cobro automático.
+
+   · precio: el texto que se muestra en toda la página.
+   · paypal: enlace de PayPal de esa región (vacío si no aplica).
+   · formulario: enlace del formulario de inscripción (Google Forms).
+   · checkout: enlace de pago de una plataforma que entregue el
+     acceso sola (Tiendup, Hotmart, Payhip…). Si lo completas, esa
+     región deja de mostrar los datos de transferencia y muestra
+     un único botón «Comprar ahora» hacia ese enlace.
+   ───────────────────────────────────────────────────────────── */
+var CONFIG = {
+  correo: 'infocursosoysd@gmail.com',
+  /* Enlace del formulario de inscripción (Google Forms). Mientras esté vacío,
+     el botón abre un correo a la dirección de consultas. */
+  formulario: 'https://docs.google.com/forms/d/e/1FAIpQLSc8R6g6vMcWXPqYPDidNB0iPm68EgQIyFDr1yzbSBeuWxbpxA/viewform',
+  /* Enlaces que se envían con el material; quedan anotados acá para tenerlos a mano. */
+  evaluacion: '',
+  acreditacion: '',
+  curso: 'Desarrollo socioafectivo en estudiantes con alta capacidad',
+  regiones: {
+    ar:  { precio: 'ARS 89.000', paypal: '', checkout: '' },
+    lat: { precio: 'USD 79', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/79USD', checkout: '' },
+    eu:  { precio: 'EUR 79', paypal: 'https://www.paypal.com/paypalme/soysuperdotado/79EUR', checkout: '' }
+  },
+
+  /* Beneficio para un grupo. Para activarlo, copia el bloque de la landing de
+     circuito-saturado (clave, hasta, fecha, porcentaje, titulo, opcion y precios). */
+  beneficio: null
+};
+
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ── Beneficio: reemplaza precios y enlaces de PayPal ── */
+  var B = CONFIG.beneficio;
+  var conBeneficio = false;
+  try {
+    conBeneficio = !!B && new URLSearchParams(location.search).get('beneficio') === B.clave &&
+      new Date() <= new Date(B.hasta);
+  } catch (e) { conBeneficio = false; }
+  if (conBeneficio) {
+    Object.keys(B.regiones).forEach(function (k) {
+      var r = CONFIG.regiones[k], d = B.regiones[k];
+      if (!r || !d) return;
+      r.antes = r.precio;
+      r.precio = d.precio;
+      if (d.paypal) r.paypal = d.paypal;
+    });
+  }
+  function ponerPrecio(el, r) {
+    if (r.antes) {
+      el.innerHTML = '<span class="precio-antes"><span class="solo-lectores">Antes </span>' + r.antes +
+        '</span><span class="solo-lectores">, ahora </span>' + r.precio;
+    } else {
+      el.textContent = r.precio;
+    }
+  }
+
+  /* ── Precios y enlaces desde CONFIG ── */
+  var claves = Object.keys(CONFIG.regiones);
+  claves.forEach(function (k) {
+    var r = CONFIG.regiones[k];
+    $$('[data-precio="' + k + '"]').forEach(function (el) { ponerPrecio(el, r); });
+    $$('[data-paypal="' + k + '"]').forEach(function (el) {
+      if (r.paypal) { el.href = r.paypal; el.textContent = 'Pagar ' + r.precio + ' con PayPal'; }
+    });
+    var panel = $('[data-region="' + k + '"]');
+    if (panel && r.checkout) {
+      $('.manual', panel).hidden = true;
+      $('.auto', panel).hidden = false;
+      var a = $('[data-checkout]', panel);
+      a.href = r.checkout;
+      a.textContent = 'Comprar ahora · ' + r.precio;
+    }
+  });
+  var todasAuto = claves.every(function (k) { return !!CONFIG.regiones[k].checkout; });
+  if (todasAuto) {
+    $('#pasos-manual').hidden = true;
+    $('#pasos-auto').hidden = false;
+    $('#comprobante').hidden = true;
+  }
+
+  if (conBeneficio) {
+    document.documentElement.classList.add('con-beneficio');
+    var texto = B.porcentaje + '\u00a0% de descuento';
+    var cab = $('.cabecera');
+    if (cab) {
+      var franja = document.createElement('div');
+      franja.className = 'beneficio-franja';
+      franja.innerHTML = '<div class="wrap"><span><strong>' + B.titulo + ':</strong> ' +
+        texto + ' hasta el ' + B.fecha + '.</span><a href="#comprar">Ver precios</a></div>';
+      cab.parentNode.insertBefore(franja, cab.nextSibling);
+    }
+    var cajaB = $('#caja-compra');
+    if (cajaB) {
+      var aviso = document.createElement('div');
+      aviso.className = 'beneficio-caja';
+      aviso.innerHTML = '<p class="beneficio-titulo">' + B.titulo + ' · ' + texto + '</p>' +
+        '<p>Los precios ya tienen el descuento aplicado. Válido hasta el ' + B.fecha + ' inclusive.</p>';
+      cajaB.insertBefore(aviso, cajaB.firstChild);
+    }
+    var btnF = $('#btn-formulario');
+    if (btnF) {
+      var nota = document.createElement('p');
+      nota.className = 'modalidad-nota';
+      nota.innerHTML = 'En la pregunta <strong>«Modalidad»</strong> del formulario, elige <strong>«' + B.opcion + ' (' +
+        texto + ')»</strong>.';
+      btnF.parentNode.insertBefore(nota, btnF);
+    }
+  }
+
+  /* ── Formulario de inscripción ── */
+  var btnForm = $('#btn-formulario');
+  if (btnForm) {
+    if (CONFIG.formulario) { btnForm.href = CONFIG.formulario; }
+    else { btnForm.href = 'mailto:' + CONFIG.correo + '?subject=' + encodeURIComponent('Inscripción: ' + CONFIG.curso); btnForm.textContent = 'Escribir para inscribirme'; btnForm.removeAttribute('target'); }
+  }
+  $('#correo-texto').textContent = CONFIG.correo;
+  $('#copiar-correo').setAttribute('data-copiar', CONFIG.correo);
+
+  /* ── Botones «Copiar» ── */
+  function marcar(btn) {
+    var antes = btn.getAttribute('data-texto') || btn.textContent;
+    btn.setAttribute('data-texto', antes);
+    btn.textContent = 'Copiado';
+    btn.classList.add('listo');
+    setTimeout(function () { btn.textContent = antes; btn.classList.remove('listo'); }, 1800);
+  }
+  function seleccionar(btn) {
+    var destino = btn.parentNode.querySelector('.valor, .correo');
+    if (!destino) return;
+    var rango = document.createRange();
+    rango.selectNodeContents(destino);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(rango);
+  }
+  $$('.copiar').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var texto = btn.getAttribute('data-copiar');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(function () { marcar(btn); }, function () { seleccionar(btn); });
+      } else {
+        seleccionar(btn);
+      }
+    });
+  });
+
+  /* ── Pestañas de región ── */
+  var lista = $('#regiones');
+  var tabs = $$('[role="tab"]', lista);
+  function elegir(k, foco) {
+    tabs.forEach(function (t) {
+      var activa = t.id === 'tab-' + k;
+      t.setAttribute('aria-selected', activa ? 'true' : 'false');
+      t.tabIndex = activa ? 0 : -1;
+      $('#' + t.getAttribute('aria-controls')).hidden = !activa;
+      if (activa && foco) t.focus();
+    });
+    var enBarra = $('#barra-precio');
+    if (enBarra && CONFIG.regiones[k]) ponerPrecio(enBarra, CONFIG.regiones[k]);
+  }
+  function regionPorZona() {
+    try {
+      var z = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      if (z.indexOf('America/Argentina') === 0 || z === 'America/Buenos_Aires') return 'ar';
+      if (z.indexOf('Europe/') === 0 || z.indexOf('Atlantic/Canary') === 0) return 'eu';
+      if (z.indexOf('America/') === 0) return 'lat';
+    } catch (e) {}
+    return 'ar';
+  }
+  lista.hidden = false;
+  $('#caja-compra').classList.add('con-pestanas');
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { elegir(t.id.replace('tab-', '')); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      var sig = tabs[(i + d + tabs.length) % tabs.length];
+      elegir(sig.id.replace('tab-', ''), true);
+    });
+  });
+  elegir(regionPorZona());
+
+  /* ── Video de presentación: portada con botón propio; los controles aparecen al reproducir ── */
+  var video = $('#video-presentacion'), play = $('.video-play');
+  if (video && play) {
+    video.controls = false;
+    play.hidden = false;
+    play.addEventListener('click', function () {
+      play.hidden = true;
+      video.controls = true;
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+  }
+
+  /* ── Menú desplegable en celular ── */
+  var menuBoton = $('.menu-boton'), menu = $('#menu-secciones');
+  if (menuBoton && menu) {
+    document.documentElement.classList.add('con-menu');
+    menuBoton.hidden = false;
+    var cerrarMenu = function () { menu.classList.remove('abierto'); document.documentElement.classList.remove('menu-abierta'); menuBoton.setAttribute('aria-expanded', 'false'); };
+    menuBoton.addEventListener('click', function () {
+      var abrir = !menu.classList.contains('abierto');
+      menu.classList.toggle('abierto', abrir);
+      document.documentElement.classList.toggle('menu-abierta', abrir);
+      menuBoton.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+    });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) cerrarMenu(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.classList.contains('abierto')) { cerrarMenu(); menuBoton.focus(); } });
+  }
+
+  /* ── Barra de compra fija en celular: aparece al pasar la presentación y se oculta al llegar a la inscripción ── */
+  var barra = $('#barra-compra');
+  if (barra && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('con-barra');
+    var primerBoton = $('.acciones .btn'), compra = $('#comprar');
+    var aLaVista = { arriba: true, compra: false };
+    var mirar = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.target === primerBoton) aLaVista.arriba = e.isIntersecting; else aLaVista.compra = e.isIntersecting;
+      });
+      barra.hidden = aLaVista.arriba || aLaVista.compra;
+    });
+    mirar.observe(primerBoton);
+    mirar.observe(compra);
+  }
+
+})();
+</script>
+</body>
+</html>

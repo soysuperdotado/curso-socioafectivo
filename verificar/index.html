@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Verificación de certificados · Soy Superdotado</title>
+<meta name="description" content="Verifica la validez de un certificado emitido por Soy Superdotado.">
+<link rel="icon" href="../img/logo-soy-superdotado.png">
+<style>
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 200 800; font-display: swap; src: url('../assets/fonts/plus-jakarta-sans-latin.woff2') format('woff2'); }
+:root { --navy: #0E2A52; --navy-deep: #0A2145; --teal: #17708C; --lime: #B2DC3A; --line: #D0DCE9; --ink: #1D2E45; --muted: #485A72; --paper: #F4F7FB; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.55; }
+.marco { min-height: 100vh; border-left: 14px solid var(--navy); box-shadow: inset 3px 0 0 var(--lime); padding: clamp(24px, 6vw, 56px) clamp(16px, 5vw, 40px); }
+.tarjeta { max-width: 640px; margin: 0 auto; background: #fff; border-radius: 18px; padding: clamp(22px, 5vw, 36px); box-shadow: 0 18px 40px -24px rgba(14, 42, 82, 0.45); }
+.marca { display: flex; align-items: center; gap: 12px; margin: 0 0 26px; }
+.marca img { width: 44px; height: 44px; }
+.marca b { display: block; color: var(--navy); font-weight: 800; font-size: 15px; }
+.marca span { color: var(--muted); font-size: 13px; }
+.etiqueta { display: inline-block; font-weight: 800; border-radius: 999px; padding: 6px 14px; margin: 0 0 14px; font-size: 15px; }
+.etiqueta.ok { background: #EAF6D0; color: #2F5A00; }
+.etiqueta.no { background: #FDE8E8; color: #8A1F1F; }
+h1 { color: var(--navy); font-size: clamp(24px, 6vw, 30px); line-height: 1.2; margin: 0 0 12px; overflow-wrap: anywhere; }
+p { margin: 0 0 12px; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 20px 0 0; }
+dt { color: var(--muted); }
+dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.nota { margin: 24px 0 0; padding: 12px 14px; border-left: 3px solid var(--lime); background: var(--paper); font-size: 13px; color: var(--muted); }
+.nota strong { color: var(--navy); }
+form { margin: 22px 0 0; }
+label { display: block; font-weight: 700; color: var(--navy); margin: 0 0 6px; }
+.fila { display: flex; gap: 8px; flex-wrap: wrap; }
+input { flex: 1 1 220px; font: inherit; font-size: 16px; padding: 11px 14px; border: 1.5px solid var(--line); border-radius: 10px; color: var(--ink); text-transform: uppercase; }
+input:focus-visible, button:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+button { font: inherit; font-weight: 800; font-size: 15px; padding: 11px 20px; border: 0; border-radius: 999px; background: var(--navy); color: #fff; cursor: pointer; }
+.ayuda { color: var(--muted); font-size: 13px; margin-top: 8px; }
+.cargando { color: var(--muted); }
+.pie { max-width: 640px; margin: 18px auto 0; font-size: 12px; color: var(--muted); text-align: center; }
+.pie a, .tarjeta a { color: var(--teal); }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="marco">
+  <main class="tarjeta" aria-live="polite">
+    <div class="marca"><img src="../img/logo-soy-superdotado.png" alt=""><div><b>Soy Superdotado</b><span>Verificación de certificados</span></div></div>
+
+    <p id="cargando" class="cargando" hidden>Buscando el certificado…</p>
+
+    <section id="valido" hidden>
+      <p class="etiqueta ok">✓ Certificado válido</p>
+      <h1 id="v-nombre"></h1>
+      <p>aprobó el curso <strong id="v-curso"></strong>, en modalidad asincrónica, con una carga horaria de <span id="v-horas"></span> horas.</p>
+      <dl>
+        <dt>Fecha de aprobación</dt><dd id="v-fecha"></dd>
+        <dt>Código</dt><dd id="v-codigo"></dd>
+        <dt>Disertante</dt><dd id="v-disertante"></dd>
+      </dl>
+      <p class="nota"><strong>Nota:</strong> <span id="v-nota"></span></p>
+    </section>
+
+    <section id="noencontrado" hidden>
+      <p class="etiqueta no">Certificado no encontrado</p>
+      <h1>No hay un certificado con este código</h1>
+      <p>El código <strong id="n-codigo"></strong> no figura en nuestros registros. Revisa que esté escrito tal como aparece en el certificado. Si crees que es un error, escríbenos a <a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a>.</p>
+    </section>
+
+    <section id="error" hidden>
+      <p class="etiqueta no">No pudimos verificarlo</p>
+      <h1>No pudimos conectarnos con el registro</h1>
+      <p>Revisa tu conexión a internet y vuelve a intentarlo en unos minutos. Si el problema sigue, escríbenos a <a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a>.</p>
+    </section>
+
+    <form id="buscar">
+      <label for="codigo">Código del certificado</label>
+      <div class="fila"><input id="codigo" name="codigo" autocomplete="off" spellcheck="false" placeholder="SD-SA-2026-0001" maxlength="40" required><button type="submit">Verificar</button></div>
+      <p class="ayuda">El código figura arriba a la derecha del certificado. También puedes escanear su código QR.</p>
+    </form>
+  </main>
+  <p class="pie">Soy Superdotado · <a href="mailto:infocursosoysd@gmail.com">infocursosoysd@gmail.com</a></p>
+</div>
+<script>
+// Registro de certificados: aplicación web de la planilla del curso (responde en formato JSON).
+var REGISTRO = 'https://script.google.com/macros/s/AKfycbyObuQ4HfS-sZBpAOUwZQwpOKo4N6EZLgdGUy74k-petSdSNFoJDWZO1zCP3wRGzaQ9/exec';
+
+var $ = function (id) { return document.getElementById(id); };
+function mostrar(id) {
+  ['cargando', 'valido', 'noencontrado', 'error'].forEach(function (x) { $(x).hidden = (x !== id); });
+  $('buscar').hidden = (id === 'valido' || id === 'cargando');
+}
+function verificar(codigo) {
+  codigo = String(codigo || '').trim().toUpperCase().slice(0, 40);
+  if (!codigo) { mostrar(null); return; }
+  $('codigo').value = codigo;
+  mostrar('cargando');
+  var ctrl = ('AbortController' in window) ? new AbortController() : null;
+  var t = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
+  fetch(REGISTRO + '?formato=json&codigo=' + encodeURIComponent(codigo), ctrl ? { signal: ctrl.signal } : {})
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (d) {
+      clearTimeout(t);
+      if (d && d.encontrado && d.certificado) {
+        var c = d.certificado;
+        $('v-nombre').textContent = c.nombre;
+        $('v-curso').textContent = '«' + c.curso + '»';
+        $('v-horas').textContent = c.horas;
+        $('v-fecha').textContent = c.fecha;
+        $('v-codigo').textContent = c.codigo;
+        $('v-disertante').textContent = c.disertante;
+        $('v-nota').textContent = c.nota;
+        mostrar('valido');
+      } else {
+        $('n-codigo').textContent = codigo;
+        mostrar('noencontrado');
+      }
+    })
+    .catch(function () { clearTimeout(t); mostrar('error'); });
+}
+$('buscar').addEventListener('submit', function (ev) {
+  ev.preventDefault();
+  var c = $('codigo').value.trim().toUpperCase();
+  history.replaceState(null, '', '?codigo=' + encodeURIComponent(c));
+  verificar(c);
+});
+verificar(new URLSearchParams(location.search).get('codigo'));
+</script>
+</body>
+</html>
